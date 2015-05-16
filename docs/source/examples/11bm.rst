@@ -1,0 +1,15 @@
+
+==================================
+APS 11-BM: A real automation robot
+==================================
+
+The Advanced Photon Source beam line 11-BM sample change robot is
+an example of a real automation robot for X-ray science.
+
+.. provide a link to the automation movie online.
+   https://www.youtube.com/watch?v=sowojskY7c4
+   https://vimeo.com/128020523
+   https://vimeo.com/128020524
+
+-----------
+
