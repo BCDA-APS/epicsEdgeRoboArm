@@ -1,0 +1,61 @@
+record(event,"ushort") {
+}
+record(ao,"evflag") {
+}
+record(longout,"requested") {
+    field(OUT,"actual PP MS")
+}
+record(longin,"actual") {
+}
+record(ao,"pvGet1") {
+}
+record(longout,"pvGetAsync1") {
+}
+record(bo,"pvPutAsync1") {
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+    field(HIGH,"1")
+    field(OUT,"pvPutAsyncSeq.SELN PP")
+}
+record(bo,"pvPutAsync2") {
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+    field(HIGH,"1")
+    field(OUT,"pvPutAsyncSeq.SELN PP")
+}
+record(seq,"pvPutAsyncSeq") {
+    field(SELM,"Specified")
+    field(DLY1,"2")
+    field(DOL1,"1")
+    field(LNK1,"pvPutAsyncRes CA")
+}
+record(longin,"pvPutAsyncRes") {
+}
+record(ao,"pv1") {
+}
+record(ao,"pv2") {
+}
+record(stringout,"a") {
+    field(VAL,"aaaaaaaaaaaaaaaaaaaa")
+    field(OUT,"x CA")
+}
+record(stringout,"b") {
+    field(VAL,"bbbbbbbbbbbbbbbbbbbb")
+    field(OUT,"x CA")
+}
+record(stringout,"c") {
+    field(VAL,"cccccccccccccccccccc")
+    field(OUT,"x CA")
+}
+record(stringout,"x") {
+}
+record(seq,"s") {
+    field(PINI,"YES")
+    field(DLY1,"0.05")
+    field(LNK1,"a.PROC")
+    field(DLY2,"0.05")
+    field(LNK2,"b.PROC")
+    field(DLY3,"0.05")
+    field(LNK3,"c.PROC")
+    field(FLNK,"s.PROC CA")
+}

@@ -1,0 +1,23 @@
+You are looking at the EPICS State Notation Language compiler
+and runtime sequencer.
+
+For more information see the .txt files under documentation:
+
+Introduction.txt
+   What all this is about, licensing, and other trivia
+Notes.txt
+   Release notes
+Installation.txt
+   How to download, build, etc
+Tutorial.txt
+   Gentle introduction to SNL, some (sloppy) semantics
+Compiling.txt
+   All about snc, the SNL compiler
+Using.txt
+   How to create a working SNL program
+Reference.txt
+   SNL syntax and built-in procedures
+PV-API.txt
+   Details about the PV API
+Examples.txt
+   Annotated example programs

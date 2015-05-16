@@ -1,0 +1,57 @@
+#Sony PS3 Controller Vendor: 0x054C Product:0x0268
+
+##########
+# Digital
+##########
+START_PRESSED       [2, 3]  ->  Bool    /0x0008
+SELECT_PRESSED      [2, 3]  ->  Bool    /0x0001
+
+L1_PRESSED          [2, 3]  ->  Bool    /0x0400
+L2_PRESSED          [2, 3]  ->  Bool    /0x0100
+L3_PRESSED          [2, 3]  ->  Bool    /0x0002
+
+R1_PRESSED          [2, 3]  ->  Bool    /0x0800
+R2_PRESSED          [2, 3]  ->  Bool    /0x0200
+R3_PRESSED          [2, 3]  ->  Bool    /0x0004
+
+UP_PRESSED          [2, 3]  ->  Bool    /0x0010
+RIGHT_PRESSED       [2, 3]  ->  Bool    /0x0020
+DOWN_PRESSED        [2, 3]  ->  Bool    /0x0040
+LEFT_PRESSED        [2, 3]  ->  Bool    /0x0080
+
+TRIANGLE_PRESSED    [2, 3]  ->  Bool    /0x1000
+CIRCLE_PRESSED      [2, 3]  ->  Bool    /0x2000
+CROSS_PRESSED       [2, 3]  ->  Bool    /0x4000
+SQUARE_PRESSED      [2, 3]  ->  Bool    /0x8000
+
+
+#########
+# Analog
+#########
+
+#Joysticks
+LEFTLR_STATE        [6]     ->  UInt8
+LEFTUD_STATE        [7]     ->  UInt8
+RIGHTLR_STATE       [8]     ->  UInt8
+RIGHTUD_STATE       [9]     ->  UInt8
+
+
+#Direction Pad
+UP_STATE            [14]    ->  UInt8
+RIGHT_STATE         [15]    ->  UInt8
+DOWN_STATE          [16]    ->  UInt8
+LEFT_STATE          [17]    ->  UInt8
+
+
+#Triggers
+L2_STATE            [18]    ->  UInt8
+R2_STATE            [19]    ->  UInt8
+L1_STATE            [20]    ->  UInt8
+R1_STATE            [21]    ->  UInt8
+
+
+#Buttons
+TRIANGLE_STATE      [22]    ->  UInt8
+CIRCLE_STATE        [23]    ->  UInt8
+CROSS_STATE         [24]    ->  UInt8
+SQUARE_STATE        [25]    ->  UInt8

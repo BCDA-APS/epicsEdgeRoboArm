@@ -1,0 +1,21 @@
+#RELEASE Location of external products
+# Run "gnumake clean uninstall install" in the application
+# top directory each time this file is changed.
+
+TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
+
+SUPPORT=/home/oxygen/MOONEY/distrib/synApps_5_6/support
+-include $(TOP)/../configure/SUPPORT.$(EPICS_HOST_ARCH)
+
+# Need SSCAN module only to build the swait record (recDynLink library)
+# If you comment this definition out, the module will just decline to
+# build the swait record.
+SSCAN=$(SUPPORT)/sscan-2-7
+
+# EPICS_BASE usually appears last so other apps can override stuff:
+EPICS_BASE=/usr/local/epics/base
+-include $(TOP)/../configure/EPICS_BASE.$(EPICS_HOST_ARCH)
+
+#Capfast users may need the following definitions
+#CAPFAST_TEMPLATES=
+#SCH2EDIF_PATH=

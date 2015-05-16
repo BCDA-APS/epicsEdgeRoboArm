@@ -1,0 +1,77 @@
+#-----------------------------------------
+Thu Feb  7 20:41:40 CST 2013
+#begin CMD: make -j distclean
+make -C ./configure realclean 
+perl /usr/local/epics/base/bin/linux-arm/cvsclean.pl
+rm -rf ./dbd ./include ./doc ./html ./javalib ./templates ./db ./adl ./alh ./cfg ./edl ./lib/perl
+rm -rf ./bin
+rm -rf ./lib
+make[1]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/configure'
+rm -rf O.*
+make[1]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/configure'
+make -C ./xxxApp realclean 
+make[1]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/xxxApp'
+make -C ./src realclean 
+make -C ./Db realclean 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/xxxApp/Db'
+rm -rf O.*
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/xxxApp/src'
+rm -rf O.*
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/xxxApp/src'
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/xxxApp/Db'
+make[1]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/xxxApp'
+make -C ./iocBoot realclean 
+make[1]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/iocBoot'
+make -C ./iocLinux realclean 
+make -C ./iocWindows realclean 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/iocBoot/iocLinux'
+rm -f cdCommands envPaths dllPath.bat
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/iocBoot/iocLinux'
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/iocBoot/iocWindows'
+rm -f cdCommands envPaths dllPath.bat
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/iocBoot/iocWindows'
+make[1]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/iocBoot'
+#done CMD: make -j distclean
+Thu Feb  7 20:41:50 CST 2013
+#-----------------------------------------
+Thu Feb  7 20:42:04 CST 2013
+#begin CMD: make -j
+make -C ./configure install 
+make[1]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/configure'
+perl /usr/local/epics/base/bin/linux-arm/makeMakefile.pl O.linux-arm ../..
+mkdir O.Common
+make -C O.linux-arm -f ../Makefile TOP=../.. T_A=linux-arm install
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/configure/O.linux-arm'
+perl /usr/local/epics/base/bin/linux-arm/convertRelease.pl checkRelease
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/configure/O.linux-arm'
+make[1]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/configure'
+make -C ./xxxApp install 
+make[1]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/xxxApp'
+make -C ./src install 
+make -C ./Db install 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/xxxApp/src'
+perl /usr/local/epics/base/bin/linux-arm/makeMakefile.pl O.linux-arm ../../..
+mkdir O.Common
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/xxxApp/Db'
+perl /usr/local/epics/base/bin/linux-arm/makeMakefile.pl O.linux-arm ../../..
+mkdir O.Common
+make -C O.linux-arm -f ../Makefile TOP=../../.. T_A=linux-arm install
+make -C O.linux-arm -f ../Makefile TOP=../../.. T_A=linux-arm install
+make[3]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/xxxApp/Db/O.linux-arm'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/xxxApp/Db/O.linux-arm'
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/xxxApp/Db'
+make[3]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/xxxApp/src/O.linux-arm'
+
+make[3]: *** No rule to make target `../../../lib/linux-arm/libcalc.a', needed by `xxx'.  Stop.
+make[3]: *** Waiting for unfinished jobs....
+perl /usr/local/epics/base/bin/linux-arm/makeIncludeDbd.pl xxxCommonInclude.dbd iocxxxLinuxInclude.dbd
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall           -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include                   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../xxxMain.c 
+make[3]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/xxxApp/src/O.linux-arm'
+make[2]: *** [install.linux-arm] Error 2
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/xxxApp/src'
+make[1]: *** [src.install] Error 2
+make[1]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/xxx-5-6/xxxApp'
+make: *** [xxxApp.install] Error 2
+#done CMD: make -j
+Thu Feb  7 20:42:29 CST 2013

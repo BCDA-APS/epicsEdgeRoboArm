@@ -1,0 +1,96 @@
+usbSetFrequency
+	Sets the frequency at which the driver reads values from the device. Most
+	USB devices work at 125hz.
+
+	const char* port_name
+		The port name the driver is operating under
+
+	double frequency
+		The frequency (in hertz) you wish the driver to operate at.
+
+
+usbSetDebugLevel
+	Sets the debug level for output from the driver.
+
+	const char* port_name 
+		The port name the driver is operating under
+
+	int amt
+		The debug level
+
+
+usbSetInterface
+	Sets the interface of the USB device that the driver claims. Some devices
+	expose multiple interfaces (like a nano usb transceiver would expose an
+	interface for a wireless mouse and one for a wireless keyboard), so you can
+	choose and switch between them. Information on interfaces can be found using
+	the command 'lsusb -v'.
+
+	const char* port_name
+		The port name the driver is operating under
+
+	int interface_num
+		The number of the interface
+
+
+usbSetDelay
+	Sets the amount of time a driver should wait between attempts to reconnect
+	to a device after a disconnection event.
+ 
+	const char* port_name
+		The port name the driver is operating under
+
+	double delay
+		The amount of time to wait
+
+
+usbSetTimeout
+	Sets the maximum amount of time a driver should wait for a usb data packet.
+
+	const char* port_name
+		The port name the driver is operating under
+
+	int timeout
+		The timeout
+
+
+void usbConnectDevice
+	Tells the driver to attempt to connect to a USB device with the given
+	specifications. If already connected to a device, it will disconnect from
+	that device before connecting to another. Information about these values
+	can be found using the command 'lsusb -v'.
+
+	const char* port_name
+		The port name the driver is operating under
+
+	int interface_num
+		The interface of the device to claim
+
+	int vendor_id
+		The vendor id of the device
+
+	int product_id
+		The product id of the device
+
+	const char* serial_num
+		The serial "number" of the device (USB specification doesn't require this
+		to be an actual number). If not given, the driver will connect to the
+		first device that matches the other parameters.
+
+
+void usbCreateDriver
+	Creates the driver object that will maintain the asyn parameters necessary
+	for communicating with USB devices.
+
+	const char* port_name
+		The port name the driver should operate under
+
+	const char* input_filename
+		A specification file detailing the structure of data packets coming in
+		from the USB device. Along with the output file, this will define the
+		asyn parameters for use in EPICS.
+
+	const char* output_filename
+		A specification file detailing the structure of data packets going out
+		to the USB device. This is an optional parameter as not all devices will
+		handle output requests.

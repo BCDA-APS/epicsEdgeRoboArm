@@ -1,0 +1,914 @@
+#
+#  roboArmSeq.db
+#
+#  Jeffrey Gebhardt
+#  BCDA APS
+#  September 11, 2012
+#
+
+record(mbbo,  "$(P)$(A)grip_move") {
+  field(DESC, "grip motion")
+  field(DTYP, "Raw Soft Channel")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "CLOSE")
+  field(ONVL, "1")
+  field(TWST, "OPEN")
+  field(TWVL, "2")
+  field(FLNK, "$(P)$(A)send_cmd.PROC  PP MS")
+}
+
+record(mbbo,  "$(P)$(A)grip_move_seq") {
+  field(DESC, "grip motion")
+  field(DTYP, "Raw Soft Channel")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "CLOSE")
+  field(ONVL, "1")
+  field(TWST, "OPEN")
+  field(TWVL, "2")
+}
+
+record(mbbo,  "$(P)$(A)grip_move_1") {
+  field(DESC, "grip motion")
+  field(DTYP, "Raw Soft Channel")
+  field(PINI, "1")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "CLOSE")
+  field(ONVL, "1")
+  field(TWST, "OPEN")
+  field(TWVL, "2")
+}
+
+record(mbbo,  "$(P)$(A)grip_move_2") {
+  field(DESC, "grip motion")
+  field(DTYP, "Raw Soft Channel")
+  field(PINI, "1")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "CLOSE")
+  field(ONVL, "1")
+  field(TWST, "OPEN")
+  field(TWVL, "2")
+}
+
+record(mbbo,  "$(P)$(A)grip_move_3") {
+  field(DESC, "grip motion")
+  field(DTYP, "Raw Soft Channel")
+  field(PINI, "1")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "CLOSE")
+  field(ONVL, "1")
+  field(TWST, "OPEN")
+  field(TWVL, "2")
+}
+
+record(mbbo,  "$(P)$(A)grip_move_4") {
+  field(DESC, "grip motion")
+  field(DTYP, "Raw Soft Channel")
+  field(PINI, "1")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "CLOSE")
+  field(ONVL, "1")
+  field(TWST, "OPEN")
+  field(TWVL, "2")
+}
+
+record(mbbo,  "$(P)$(A)grip_move_5") {
+  field(DESC, "grip motion")
+  field(DTYP, "Raw Soft Channel")
+  field(PINI, "1")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "CLOSE")
+  field(ONVL, "1")
+  field(TWST, "OPEN")
+  field(TWVL, "2")
+}
+
+record(ao,  "$(P)$(A)grip_start_1") {
+  field(DESC, "grip start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)grip_start_2") {
+  field(DESC, "grip start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)grip_start_3") {
+  field(DESC, "grip start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)grip_start_4") {
+  field(DESC, "grip start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)grip_start_5") {
+  field(DESC, "grip start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)grip_delay_1") {
+  field(DESC, "grip motion timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)grip_delay_2") {
+  field(DESC, "grip motion timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)grip_delay_3") {
+  field(DESC, "grip motion timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)grip_delay_4") {
+  field(DESC, "grip motion timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)grip_delay_5") {
+  field(DESC, "grip motion timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(mbbo,  "$(P)$(A)wrist_move") {
+  field(DESC, "wrist motion")
+  field(DTYP, "Raw Soft Channel")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "4")
+  field(TWST, "DOWN")
+  field(TWVL, "8")
+  field(FLNK, "$(P)$(A)send_cmd.PROC  PP MS")
+}
+
+record(mbbo,  "$(P)$(A)wrist_move_seq") {
+  field(DESC, "wrist motion")
+  field(DTYP, "Raw Soft Channel")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "4")
+  field(TWST, "DOWN")
+  field(TWVL, "8")
+}
+
+record(mbbo,  "$(P)$(A)wrist_move_1") {
+  field(DESC, "wrist motion")
+  field(DTYP, "Raw Soft Channel")
+  field(PINI, "1")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "4")
+  field(TWST, "DOWN")
+  field(TWVL, "8")
+}
+
+record(mbbo,  "$(P)$(A)wrist_move_2") {
+  field(DESC, "wrist motion")
+  field(DTYP, "Raw Soft Channel")
+  field(PINI, "1")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "4")
+  field(TWST, "DOWN")
+  field(TWVL, "8")
+}
+
+record(mbbo,  "$(P)$(A)wrist_move_3") {
+  field(DESC, "wrist motion")
+  field(DTYP, "Raw Soft Channel")
+  field(PINI, "1")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "4")
+  field(TWST, "DOWN")
+  field(TWVL, "8")
+}
+
+record(mbbo,  "$(P)$(A)wrist_move_4") {
+  field(DESC, "wrist motion")
+  field(DTYP, "Raw Soft Channel")
+  field(PINI, "1")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "4")
+  field(TWST, "DOWN")
+  field(TWVL, "8")
+}
+
+record(mbbo,  "$(P)$(A)wrist_move_5") {
+  field(DESC, "wrist motion")
+  field(DTYP, "Raw Soft Channel")
+  field(PINI, "1")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "4")
+  field(TWST, "DOWN")
+  field(TWVL, "8")
+}
+
+record(ao,  "$(P)$(A)wrist_start_1") {
+  field(DESC, "wrist start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)wrist_start_2") {
+  field(DESC, "wrist start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)wrist_start_3") {
+  field(DESC, "wrist start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)wrist_start_4") {
+  field(DESC, "wrist start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)wrist_start_5") {
+  field(DESC, "wrist start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)wrist_delay_1") {
+  field(DESC, "wrist motion timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)wrist_delay_2") {
+  field(DESC, "wrist motion timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)wrist_delay_3") {
+  field(DESC, "wrist motion timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)wrist_delay_4") {
+  field(DESC, "wrist motion timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)wrist_delay_5") {
+  field(DESC, "wrist motion timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(mbbo,  "$(P)$(A)elbow_move") {
+  field(DESC, "elbow motion")
+  field(DTYP, "Raw Soft Channel")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "16")
+  field(TWST, "DOWN")
+  field(TWVL, "32")
+  field(FLNK, "$(P)$(A)send_cmd.PROC  PP MS")
+}
+
+record(mbbo,  "$(P)$(A)elbow_move_seq") {
+  field(DESC, "elbow motion")
+  field(DTYP, "Raw Soft Channel")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "16")
+  field(TWST, "DOWN")
+  field(TWVL, "32")
+}
+
+record(mbbo,  "$(P)$(A)elbow_move_1") {
+  field(DESC, "elbow motion")
+  field(DTYP, "Raw Soft Channel")
+  field(PINI, "1")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "16")
+  field(TWST, "DOWN")
+  field(TWVL, "32")
+}
+
+record(mbbo,  "$(P)$(A)elbow_move_2") {
+  field(DESC, "elbow motion")
+  field(DTYP, "Raw Soft Channel")
+  field(PINI, "1")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "16")
+  field(TWST, "DOWN")
+  field(TWVL, "32")
+}
+
+record(mbbo,  "$(P)$(A)elbow_move_3") {
+  field(DESC, "elbow motion")
+  field(DTYP, "Raw Soft Channel")
+  field(PINI, "1")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "16")
+  field(TWST, "DOWN")
+  field(TWVL, "32")
+}
+
+record(mbbo,  "$(P)$(A)elbow_move_4") {
+  field(DESC, "elbow motion")
+  field(DTYP, "Raw Soft Channel")
+  field(PINI, "1")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "16")
+  field(TWST, "DOWN")
+  field(TWVL, "32")
+}
+
+record(mbbo,  "$(P)$(A)elbow_move_5") {
+  field(DESC, "elbow motion")
+  field(DTYP, "Raw Soft Channel")
+  field(PINI, "1")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "16")
+  field(TWST, "DOWN")
+  field(TWVL, "32")
+}
+
+record(ao,  "$(P)$(A)elbow_start_1") {
+  field(DESC, "elbow start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)elbow_start_2") {
+  field(DESC, "elbow start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)elbow_start_3") {
+  field(DESC, "elbow start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)elbow_start_4") {
+  field(DESC, "elbow start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)elbow_start_5") {
+  field(DESC, "elbow start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)elbow_delay_1") {
+  field(DESC, "elbow motion timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)elbow_delay_2") {
+  field(DESC, "elbow motion timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)elbow_delay_3") {
+  field(DESC, "elbow motion timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)elbow_delay_4") {
+  field(DESC, "elbow motion timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)elbow_delay_5") {
+  field(DESC, "elbow motion timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(mbbo,  "$(P)$(A)shoulder_move") {
+  field(DESC, "shoulder motion")
+  field(DTYP, "Raw Soft Channel")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "64")
+  field(TWST, "DOWN")
+  field(TWVL, "128")
+  field(FLNK, "$(P)$(A)send_cmd.PROC  PP MS")
+}
+
+record(mbbo,  "$(P)$(A)shoulder_move_seq") {
+  field(DESC, "shoulder motion")
+  field(DTYP, "Raw Soft Channel")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "64")
+  field(TWST, "DOWN")
+  field(TWVL, "128")
+}
+
+record(mbbo,  "$(P)$(A)shoulder_move_1") {
+  field(DESC, "shoulder motion")
+  field(DTYP, "Raw Soft Channel")
+  field(PINI, "1")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "64")
+  field(TWST, "DOWN")
+  field(TWVL, "128")
+}
+
+record(mbbo,  "$(P)$(A)shoulder_move_2") {
+  field(DESC, "shoulder motion")
+  field(DTYP, "Raw Soft Channel")
+  field(PINI, "1")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "64")
+  field(TWST, "DOWN")
+  field(TWVL, "128")
+}
+
+record(mbbo,  "$(P)$(A)shoulder_move_3") {
+  field(DESC, "shoulder motion")
+  field(DTYP, "Raw Soft Channel")
+  field(PINI, "1")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "64")
+  field(TWST, "DOWN")
+  field(TWVL, "128")
+}
+
+record(mbbo,  "$(P)$(A)shoulder_move_4") {
+  field(DESC, "shoulder motion")
+  field(DTYP, "Raw Soft Channel")
+  field(PINI, "1")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "64")
+  field(TWST, "DOWN")
+  field(TWVL, "128")
+}
+
+record(mbbo,  "$(P)$(A)shoulder_move_5") {
+  field(DESC, "shoulder motion")
+  field(DTYP, "Raw Soft Channel")
+  field(PINI, "1")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "64")
+  field(TWST, "DOWN")
+  field(TWVL, "128")
+}
+
+record(ao,  "$(P)$(A)shoulder_start_1") {
+  field(DESC, "shoulder start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)shoulder_start_2") {
+  field(DESC, "shoulder start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)shoulder_start_3") {
+  field(DESC, "shoulder start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)shoulder_start_4") {
+  field(DESC, "shoulder start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)shoulder_start_5") {
+  field(DESC, "shoulder start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ai,  "$(P)$(A)shoulder_delay_1") {
+  field(DESC, "shoulder motion timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ai,  "$(P)$(A)shoulder_delay_2") {
+  field(DESC, "shoulder motion timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ai,  "$(P)$(A)shoulder_delay_3") {
+  field(DESC, "shoulder motion timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ai,  "$(P)$(A)shoulder_delay_4") {
+  field(DESC, "shoulder motion timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ai,  "$(P)$(A)shoulder_delay_5") {
+  field(DESC, "shoulder motion timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(mbbo,  "$(P)$(A)base_move") {
+  field(DESC, "base motion")
+  field(DTYP, "Raw Soft Channel")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "ClockWise")
+  field(ONVL, "1")
+  field(TWST, "CounterClockWise")
+  field(TWVL, "2")
+  field(FLNK, "$(P)$(A)send_cmd.PROC  PP MS")
+}
+
+record(mbbo,  "$(P)$(A)base_move_seq") {
+  field(DESC, "base motion")
+  field(DTYP, "Raw Soft Channel")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "ClockWise")
+  field(ONVL, "1")
+  field(TWST, "CounterClockWise")
+  field(TWVL, "2")
+}
+
+record(mbbo,  "$(P)$(A)base_move_1") {
+  field(DESC, "base motion")
+  field(DTYP, "Raw Soft Channel")
+  field(PINI, "1")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "ClockWise")
+  field(ONVL, "1")
+  field(TWST, "CounterClockWise")
+  field(TWVL, "2")
+}
+
+record(mbbo,  "$(P)$(A)base_move_2") {
+  field(DESC, "base motion")
+  field(DTYP, "Raw Soft Channel")
+  field(PINI, "1")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "ClockWise")
+  field(ONVL, "1")
+  field(TWST, "CounterClockWise")
+  field(TWVL, "2")
+}
+
+record(mbbo,  "$(P)$(A)base_move_3") {
+  field(DESC, "base motion")
+  field(DTYP, "Raw Soft Channel")
+  field(PINI, "1")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "ClockWise")
+  field(ONVL, "1")
+  field(TWST, "CounterClockWise")
+  field(TWVL, "2")
+}
+
+record(mbbo,  "$(P)$(A)base_move_4") {
+  field(DESC, "base motion")
+  field(DTYP, "Raw Soft Channel")
+  field(PINI, "1")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "ClockWise")
+  field(ONVL, "1")
+  field(TWST, "CounterClockWise")
+  field(TWVL, "2")
+}
+
+record(mbbo,  "$(P)$(A)base_move_5") {
+  field(DESC, "base motion")
+  field(DTYP, "Raw Soft Channel")
+  field(PINI, "1")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "ClockWise")
+  field(ONVL, "1")
+  field(TWST, "CounterClockWise")
+  field(TWVL, "2")
+}
+
+record(ao,  "$(P)$(A)base_start_1") {
+  field(DESC, "base start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)base_start_2") {
+  field(DESC, "base start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)base_start_3") {
+  field(DESC, "base start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)base_start_4") {
+  field(DESC, "base start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)base_start_5") {
+  field(DESC, "base start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ai,  "$(P)$(A)base_delay_1") {
+  field(DESC, "base motion timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ai,  "$(P)$(A)base_delay_2") {
+  field(DESC, "base motion timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ai,  "$(P)$(A)base_delay_3") {
+  field(DESC, "base motion timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ai,  "$(P)$(A)base_delay_4") {
+  field(DESC, "base motion timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ai,  "$(P)$(A)base_delay_5") {
+  field(DESC, "base motion timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(bo,    "$(P)$(A)led_onoff") {
+  field(DESC, "LED on/off")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  field(FLNK, "$(P)$(A)send_cmd.PROC  PP MS")
+}
+
+record(bo,    "$(P)$(A)led_onoff_seq") {
+  field(DESC, "LED on/off")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+}
+
+record(bo,  "$(P)$(A)led_onoff_1") {
+  field(DESC, "LED on/off")
+  field(PINI, "1")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+}
+
+record(bo,    "$(P)$(A)led_onoff_2") {
+  field(DESC, "LED on/off")
+  field(PINI, "1")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+}
+
+record(bo,    "$(P)$(A)led_onoff_3") {
+  field(DESC, "LED on/off")
+  field(PINI, "1")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+}
+
+record(bo,    "$(P)$(A)led_onoff_4") {
+  field(DESC, "LED on/off")
+  field(PINI, "1")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+}
+
+record(bo,    "$(P)$(A)led_onoff_5") {
+  field(DESC, "LED on/off")
+  field(PINI, "1")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+}
+
+record(ao,  "$(P)$(A)led_start_1") {
+  field(DESC, "led start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)led_start_2") {
+  field(DESC, "led start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)led_start_3") {
+  field(DESC, "led start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)led_start_4") {
+  field(DESC, "led start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)led_start_5") {
+  field(DESC, "led start timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+
+record(ao,  "$(P)$(A)led_delay_1") {
+  field(DESC, "led on/off timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)led_delay_2") {
+  field(DESC, "led on/off timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)led_delay_3") {
+  field(DESC, "led on/off timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)led_delay_4") {
+  field(DESC, "led on/off timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(ao,  "$(P)$(A)led_delay_5") {
+  field(DESC, "led on/off timer")
+  field(PINI, "1")
+  field(PREC, "2")
+}
+
+record(bo,    "$(P)$(A)start_moves") {
+  field(DESC, "start seq moves")
+  field(ZNAM, "STOP")
+  field(ONAM, "RUN")
+  field(FLNK, "$(P)$(A)send_cmd_seq.PROC  PP  MS")
+}
+
+record(transform, "$(P)$(A)all_stop") {
+  field(DESC, "send the stop motion command")
+  field(CLCA, "0")
+  field(CLCB, "0")
+  field(CLCC, "0")
+  field(CLCD, "0")
+  field(CLCE, "0")
+  field(CLCF, "0")
+  field(CLCG, "0")
+  field(CLCH, "0")
+  field(CLCI, "0")
+  field(CLCJ, "0")
+  field(OUTA, "$(P)$(A)grip_move.VAL           NPP NMS")
+  field(OUTB, "$(P)$(A)wrist_move.VAL          NPP NMS")
+  field(OUTC, "$(P)$(A)elbow_move.VAL          NPP NMS")
+  field(OUTD, "$(P)$(A)shoulder_move.VAL       NPP NMS")
+  field(OUTE, "$(P)$(A)base_move.VAL           NPP NMS")
+  field(OUTF, "$(P)$(A)grip_move_seq.VAL       NPP NMS")
+  field(OUTG, "$(P)$(A)wrist_move_seq.VAL      NPP NMS")
+  field(OUTH, "$(P)$(A)elbow_move_seq.VAL      NPP NMS")
+  field(OUTI, "$(P)$(A)shoulder_move_seq.VAL   NPP NMS")
+  field(OUTJ, "$(P)$(A)base_move_seq.VAL       NPP NMS")
+  field(FLNK, "$(P)$(A)send_cmd.PROC            PP  MS")
+}
+
+record(calc,  "$(P)$(A)send_cmd") {
+  field(DESC, "send the motion command")
+  field(INPA, "$(P)$(A)grip_move.RVAL      NPP NMS")
+  field(INPB, "$(P)$(A)wrist_move.RVAL     NPP NMS")
+  field(INPC, "$(P)$(A)elbow_move.RVAL     NPP NMS")
+  field(INPD, "$(P)$(A)shoulder_move.RVAL  NPP NMS")
+  field(CALC, "A+B+C+D")
+  field(FLNK, "$(P)$(A)send_cmd_2.PROC      PP  MS") 
+}
+
+record(calc,  "$(P)$(A)send_cmd_seq") {
+  field(DESC, "send the motion command")
+  field(INPA, "$(P)$(A)grip_move_seq.RVAL      NPP NMS")
+  field(INPB, "$(P)$(A)wrist_move_seq.RVAL     NPP NMS")
+  field(INPC, "$(P)$(A)elbow_move_seq.RVAL     NPP NMS")
+  field(INPD, "$(P)$(A)shoulder_move_seq.RVAL  NPP NMS")
+  field(CALC, "A+B+C+D")
+  field(FLNK, "$(P)$(A)send_cmd_seq_2.PROC      PP  MS") 
+}
+
+record(scalcout, "$(P)$(A)send_cmd_2") {
+  field(DESC, "send the motion command")
+  field(INPA, "$(P)$(A)send_cmd.VAL        NPP NMS")
+  field(INPB, "$(P)$(A)base_move.RVAL      NPP NMS")
+  field(INPC, "$(P)$(A)led_onoff.VAL       NPP NMS")
+  field(CALC, "STR(A)+' '+STR(B)+' '+STR(C)")
+  field(OUT,  "$(P)$(A)send_cmd_str.VAL     PP  MS") 
+}
+
+record(scalcout, "$(P)$(A)send_cmd_seq_2") {
+  field(DESC, "send the motion command")
+  field(INPA, "$(P)$(A)send_cmd_seq.VAL     NPP NMS")
+  field(INPB, "$(P)$(A)base_move_seq.RVAL   NPP NMS")
+  field(INPC, "$(P)$(A)led_onoff_seq.VAL    NPP NMS")
+  field(CALC, "STR(A)+' '+STR(B)+' '+STR(C)")
+  field(OUT,  "$(P)$(A)send_cmd_str_seq.VAL  PP  MS") 
+}
+
+record(stringout, "$(P)$(A)send_cmd_str") {
+  field(DESC, "send the motion command string")
+  field(DTYP, "asyn robo stringParm")
+  field(OUT, "@asyn($(PORT))")
+}
+
+record(stringout, "$(P)$(A)send_cmd_str_seq") {
+  field(DESC, "send the motion command string")
+  field(DTYP, "asyn robo stringParm")
+  field(OUT, "@asyn($(PORT))")
+}
+

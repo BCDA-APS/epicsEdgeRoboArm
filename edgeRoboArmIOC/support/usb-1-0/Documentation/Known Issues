@@ -1,0 +1,4 @@
+There is an overflow issue with way the polling interval is calculated. If 
+your USB transfers take a bit under 585 years to complete, you may find 
+that epicsThreadSleep is called when it shouldn't, causing a delay up to the
+amount of time a single update takes (default: 0.008 sec).

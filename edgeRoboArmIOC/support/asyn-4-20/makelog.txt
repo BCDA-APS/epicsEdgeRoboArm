@@ -1,0 +1,772 @@
+#-----------------------------------------
+Thu Feb  7 20:25:33 CST 2013
+#begin CMD: make
+make -C ./configure install 
+make[1]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/configure'
+perl /usr/local/epics/base/bin/linux-arm/makeMakefile.pl O.linux-arm ../..
+mkdir O.Common
+make -C O.linux-arm -f ../Makefile TOP=../.. T_A=linux-arm install
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/configure/O.linux-arm'
+perl /usr/local/epics/base/bin/linux-arm/convertRelease.pl checkRelease
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/configure/O.linux-arm'
+make[1]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/configure'
+make -C ./makeSupport install 
+make[1]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/makeSupport'
+perl /usr/local/epics/base/bin/linux-arm/makeMakefile.pl O.linux-arm ../..
+mkdir O.Common
+make -C O.linux-arm -f ../Makefile TOP=../.. T_A=linux-arm install
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/makeSupport/O.linux-arm'
+Installing script ../../bin/linux-arm/makeSupport.pl
+mkdir ../../bin
+mkdir ../../bin/linux-arm
+Installing ../../templates/top/Makefile
+mkdir ../../templates
+mkdir ../../templates/top
+Installing ../../templates/top/configure/CONFIG
+mkdir ../../templates/top/configure
+Installing ../../templates/top/configure/CONFIG_APP
+Installing ../../templates/top/configure/Makefile
+Installing ../../templates/top/configure/RELEASE
+Installing ../../templates/top/configure/RULES
+Installing ../../templates/top/configure/RULES_DIRS
+Installing ../../templates/top/configure/RULES_TOP
+Installing ../../templates/devGpib/_NAME_Sup/Makefile
+mkdir ../../templates/devGpib
+mkdir ../../templates/devGpib/_NAME_Sup
+Installing ../../templates/devGpib/_NAME_Sup/dev_NAME_.c
+Installing ../../templates/devGpib/_NAME_Sup/dev_NAME_.db
+Installing ../../templates/devGpib/_NAME_Sup/dev_NAME_.dbd
+Installing ../../templates/devGpib/documentation/dev_NAME_.html
+mkdir ../../templates/devGpib/documentation
+Installing ../../templates/app/_NAME_App/Db/Makefile
+mkdir ../../templates/app
+mkdir ../../templates/app/_NAME_App
+mkdir ../../templates/app/_NAME_App/Db
+Installing ../../templates/app/_NAME_App/Db/_NAME_.db
+Installing ../../templates/app/_NAME_App/src/Makefile
+mkdir ../../templates/app/_NAME_App/src
+Installing ../../templates/app/_NAME_App/src/_NAME_Main.cpp
+Installing ../../templates/app/_NAME_App/src/sncExample.stt
+Installing ../../templates/app/_NAME_App/Makefile
+Installing ../../templates/vxioc/configure/RULES.ioc
+mkdir ../../templates/vxioc
+mkdir ../../templates/vxioc/configure
+Installing ../../templates/vxioc/iocBoot/_IOCNAME_/Makefile
+mkdir ../../templates/vxioc/iocBoot
+mkdir ../../templates/vxioc/iocBoot/_IOCNAME_
+Installing ../../templates/vxioc/iocBoot/_IOCNAME_/st.cmd
+Installing ../../templates/vxioc/iocBoot/Makefile
+Installing ../../templates/vxioc/iocBoot/nfsCommands
+Installing ../../templates/vxioc.pl
+Installing ../../templates/softioc/configure/RULES.ioc
+mkdir ../../templates/softioc
+mkdir ../../templates/softioc/configure
+Installing ../../templates/softioc/iocBoot/_IOCNAME_/Makefile
+mkdir ../../templates/softioc/iocBoot
+mkdir ../../templates/softioc/iocBoot/_IOCNAME_
+Installing ../../templates/softioc/iocBoot/_IOCNAME_/README
+Installing ../../templates/softioc/iocBoot/_IOCNAME_/st.cmd
+Installing ../../templates/softioc/iocBoot/Makefile
+Installing ../../templates/softioc.pl
+Installing ../../templates/streamSCPI/_NAME_Sup/Makefile
+mkdir ../../templates/streamSCPI
+mkdir ../../templates/streamSCPI/_NAME_Sup
+Installing ../../templates/streamSCPI/_NAME_Sup/dev_NAME_.proto
+Installing ../../templates/streamSCPI/_NAME_Sup/dev_NAME_.db
+Installing ../../templates/streamSCPI/documentation/dev_NAME_.html
+mkdir ../../templates/streamSCPI/documentation
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/makeSupport/O.linux-arm'
+make[1]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/makeSupport'
+make -C ./asyn install 
+make[1]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/asyn'
+perl /usr/local/epics/base/bin/linux-arm/makeMakefile.pl O.linux-arm ../..
+mkdir O.Common
+make -C O.linux-arm -f ../Makefile TOP=../.. T_A=linux-arm install
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/asyn/O.linux-arm'
+Installing dbd file ../../dbd/drvAsynSerialPort.dbd
+mkdir ../../dbd
+Installing dbd file ../../dbd/drvAsynIPPort.dbd
+Installing dbd file ../../dbd/drvAsynUSBPort.dbd
+Installing dbd file ../../dbd/asyn.dbd
+Installing dbd file ../../dbd/devAsynOctet.dbd
+Installing dbd file ../../dbd/devAsynInt32.dbd
+Installing dbd file ../../dbd/devAsynInt8Array.dbd
+Installing dbd file ../../dbd/devAsynInt16Array.dbd
+Installing dbd file ../../dbd/devAsynInt32Array.dbd
+Installing dbd file ../../dbd/devAsynInt32TimeSeries.dbd
+Installing dbd file ../../dbd/devAsynUInt32Digital.dbd
+Installing dbd file ../../dbd/devAsynFloat64.dbd
+Installing dbd file ../../dbd/devAsynFloat32Array.dbd
+Installing dbd file ../../dbd/devAsynFloat64Array.dbd
+Installing dbd file ../../dbd/devAsynFloat64TimeSeries.dbd
+Installing dbd file ../../dbd/devEpics.dbd
+Installing dbd file ../../dbd/devAsynRecord.dbd
+Installing dbd file ../../dbd/drvVxi11.dbd
+Installing dbd file ../../dbd/drvGsIP488.dbd
+Installing dbd file ../../dbd/drvNi1014.dbd
+Installing dbd file ../../dbd/devGpib.dbd
+Installing dbd file ../../dbd/asynRecord.dbd
+Installing db file ../../db/asynInt32TimeSeries.db
+mkdir ../../db
+Installing db file ../../db/asynFloat64TimeSeries.db
+Installing db file ../../db/asynRecord.db
+echo "../O.Common/asynRecord.h : ../Makefile" >> asynRecord.h.d
+/usr/local/epics/base/bin/linux-arm/dbToRecordtypeH  -I. -I.. -I../O.Common -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../dbd -I/usr/local/epics/synApps/support/ipac-2-11/dbd -I/usr/local/epics/synApps/support/seq-2-1-9/dbd -I/usr/local/epics/base/dbd ../../asyn/asynRecord/asynRecord.dbd asynRecord.h
+Installing generic include file ../../include/asynDriver.h
+mkdir ../../include
+Installing generic include file ../../include/epicsInterruptibleSyscall.h
+Installing generic include file ../../include/asynGpibDriver.h
+Installing generic include file ../../include/drvAsynSerialPort.h
+Installing generic include file ../../include/drvAsynIPPort.h
+Installing generic include file ../../include/drvAsynIPServerPort.h
+Installing generic include file ../../include/drvAsynUSBPort.h
+Installing generic include file ../../include/asynInt32.h
+Installing generic include file ../../include/asynInt32SyncIO.h
+Installing generic include file ../../include/asynUInt32Digital.h
+Installing generic include file ../../include/asynUInt32DigitalSyncIO.h
+Installing generic include file ../../include/asynFloat64.h
+Installing generic include file ../../include/asynFloat64SyncIO.h
+Installing generic include file ../../include/asynInt8Array.h
+Installing generic include file ../../include/asynInt8ArraySyncIO.h
+Installing generic include file ../../include/asynInt16Array.h
+Installing generic include file ../../include/asynInt16ArraySyncIO.h
+Installing generic include file ../../include/asynInt32Array.h
+Installing generic include file ../../include/asynInt32ArraySyncIO.h
+Installing generic include file ../../include/asynFloat32Array.h
+Installing generic include file ../../include/asynFloat32ArraySyncIO.h
+Installing generic include file ../../include/asynFloat64Array.h
+Installing generic include file ../../include/asynFloat64ArraySyncIO.h
+Installing generic include file ../../include/asynOctet.h
+Installing generic include file ../../include/asynOctetSyncIO.h
+Installing generic include file ../../include/asynGenericPointer.h
+Installing generic include file ../../include/asynGenericPointerSyncIO.h
+Installing generic include file ../../include/asynEnum.h
+Installing generic include file ../../include/asynEnumSyncIO.h
+Installing generic include file ../../include/asynCommonSyncIO.h
+Installing generic include file ../../include/asynOption.h
+Installing generic include file ../../include/asynDrvUser.h
+Installing generic include file ../../include/asynStandardInterfaces.h
+Installing generic include file ../../include/asynShellCommands.h
+Installing generic include file ../../include/asynInterposeCom.h
+Installing generic include file ../../include/asynInterposeEos.h
+Installing generic include file ../../include/asynInterposeFlush.h
+Installing generic include file ../../include/ParamListInvalidIndex.h
+Installing generic include file ../../include/ParamListParamNotFound.h
+Installing generic include file ../../include/ParamValNotDefined.h
+Installing generic include file ../../include/ParamValStringSizeRequestTooBig.h
+Installing generic include file ../../include/ParamValWrongType.h
+Installing generic include file ../../include/ParamValValueNotChanged.h
+Installing generic include file ../../include/asynParamType.h
+Installing generic include file ../../include/paramVal.h
+Installing generic include file ../../include/paramList.h
+Installing generic include file ../../include/asynPortDriver.h
+Installing generic include file ../../include/asynEpicsUtils.h
+Installing generic include file ../../include/devGpib.h
+Installing generic include file ../../include/devSupportGpib.h
+Installing generic include file ../../include/devCommonGpib.h
+Installing generated generic include file ../../include/asynRecord.h
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/asynDriver/asynManager.c 
+../../asyn/asynDriver/asynManager.c: In function ‘lockPort’:
+../../asyn/asynDriver/asynManager.c:1690:20: warning: variable ‘status’ set but not used [-Wunused-but-set-variable]
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/asynDriver/epicsInterruptibleSyscall.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/asynGpib/asynGpib.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/drvAsynSerial/drvAsynSerialPort.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/drvAsynSerial/drvAsynIPPort.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/drvAsynSerial/drvAsynIPServerPort.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/drvAsynSerial/drvAsynUSBPort.c 
+../../asyn/drvAsynSerial/drvAsynUSBPort.c: In function ‘readIt’:
+../../asyn/drvAsynSerial/drvAsynUSBPort.c:109:22: warning: unused variable ‘usb’ [-Wunused-variable]
+../../asyn/drvAsynSerial/drvAsynUSBPort.c: In function ‘flushIt’:
+../../asyn/drvAsynSerial/drvAsynUSBPort.c:117:22: warning: unused variable ‘usb’ [-Wunused-variable]
+../../asyn/drvAsynSerial/drvAsynUSBPort.c: In function ‘getOption’:
+../../asyn/drvAsynSerial/drvAsynUSBPort.c:130:22: warning: unused variable ‘usb’ [-Wunused-variable]
+../../asyn/drvAsynSerial/drvAsynUSBPort.c: In function ‘setOption’:
+../../asyn/drvAsynSerial/drvAsynUSBPort.c:138:22: warning: unused variable ‘usb’ [-Wunused-variable]
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/interfaces/asynInt32Base.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/interfaces/asynInt32SyncIO.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/interfaces/asynInt8ArrayBase.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/interfaces/asynInt8ArraySyncIO.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/interfaces/asynInt16ArrayBase.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/interfaces/asynInt16ArraySyncIO.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/interfaces/asynInt32ArrayBase.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/interfaces/asynInt32ArraySyncIO.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/interfaces/asynUInt32DigitalBase.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/interfaces/asynUInt32DigitalSyncIO.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/interfaces/asynFloat64Base.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/interfaces/asynFloat64SyncIO.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/interfaces/asynFloat32ArrayBase.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/interfaces/asynFloat32ArraySyncIO.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/interfaces/asynFloat64ArrayBase.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/interfaces/asynFloat64ArraySyncIO.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/interfaces/asynOctetBase.c 
+../../asyn/interfaces/asynOctetBase.c: In function ‘flushIt’:
+../../asyn/interfaces/asynOctetBase.c:249:16: warning: variable ‘status’ set but not used [-Wunused-but-set-variable]
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/interfaces/asynOctetSyncIO.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/interfaces/asynGenericPointerBase.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/interfaces/asynGenericPointerSyncIO.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/interfaces/asynEnumBase.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/interfaces/asynEnumSyncIO.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/interfaces/asynCommonSyncIO.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/interfaces/asynStandardInterfacesBase.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/miscellaneous/asynShellCommands.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/miscellaneous/asynInterposeCom.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/miscellaneous/asynInterposeEos.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/miscellaneous/asynInterposeFlush.c 
+../../asyn/miscellaneous/asynInterposeFlush.c: In function ‘flushIt’:
+../../asyn/miscellaneous/asynInterposeFlush.c:119:18: warning: variable ‘status’ set but not used [-Wunused-but-set-variable]
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/asynPortDriver/exceptions/ParamListInvalidIndex.cpp 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/asynPortDriver/exceptions/ParamListParamNotFound.cpp 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/asynPortDriver/exceptions/ParamValNotDefined.cpp 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/asynPortDriver/exceptions/ParamValStringSizeRequestTooBig.cpp 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/asynPortDriver/exceptions/ParamValWrongType.cpp 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/asynPortDriver/exceptions/ParamValValueNotChanged.cpp 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/asynPortDriver/paramVal.cpp 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/asynPortDriver/paramList.cpp 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/asynPortDriver/asynPortDriver.cpp 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/devEpics/devAsynOctet.c 
+../../asyn/devEpics/devAsynOctet.c: In function ‘initSoWrite’:
+../../asyn/devEpics/devAsynOctet.c:556:17: warning: variable ‘pdevPvt’ set but not used [-Wunused-but-set-variable]
+../../asyn/devEpics/devAsynOctet.c: In function ‘callbackSoWrite’:
+../../asyn/devEpics/devAsynOctet.c:569:21: warning: variable ‘status’ set but not used [-Wunused-but-set-variable]
+../../asyn/devEpics/devAsynOctet.c: In function ‘initWfWrite’:
+../../asyn/devEpics/devAsynOctet.c:672:17: warning: variable ‘pdevPvt’ set but not used [-Wunused-but-set-variable]
+../../asyn/devEpics/devAsynOctet.c: In function ‘callbackWfWrite’:
+../../asyn/devEpics/devAsynOctet.c:686:21: warning: variable ‘status’ set but not used [-Wunused-but-set-variable]
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/devEpics/asynEpicsUtils.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/devEpics/devAsynInt32.c 
+../../asyn/devEpics/devAsynInt32.c: In function ‘initBi’:
+../../asyn/devEpics/devAsynInt32.c:906:18: warning: variable ‘pPvt’ set but not used [-Wunused-but-set-variable]
+../../asyn/devEpics/devAsynInt32.c: In function ‘initMbbi’:
+../../asyn/devEpics/devAsynInt32.c:1002:18: warning: variable ‘pPvt’ set but not used [-Wunused-but-set-variable]
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/devEpics/devAsynInt8Array.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/devEpics/devAsynInt16Array.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/devEpics/devAsynInt32Array.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/devEpics/devAsynInt32TimeSeries.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/devEpics/devAsynUInt32Digital.c 
+../../asyn/devEpics/devAsynUInt32Digital.c: In function ‘initLi’:
+../../asyn/devEpics/devAsynUInt32Digital.c:636:13: warning: variable ‘pPvt’ set but not used [-Wunused-but-set-variable]
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/devEpics/devAsynFloat64.c 
+../../asyn/devEpics/devAsynFloat64.c: In function ‘initAi’:
+../../asyn/devEpics/devAsynFloat64.c:406:13: warning: variable ‘pPvt’ set but not used [-Wunused-but-set-variable]
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/devEpics/devAsynFloat32Array.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/devEpics/devAsynFloat64Array.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/devEpics/devAsynFloat64TimeSeries.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/asynRecord/asynRecord.c 
+../../asyn/asynRecord/asynRecord.c: In function ‘getEos’:
+../../asyn/asynRecord/asynRecord.c:1904:9: warning: variable ‘ntranslate’ set but not used [-Wunused-but-set-variable]
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/asynRecord/drvAsyn.c 
+cp ../vxi11/vxi11core.rpcl .
+rpcgen  vxi11core.rpcl
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       vxi11core_xdr.c 
+vxi11core_xdr.c: In function ‘xdr_Device_Link’:
+vxi11core_xdr.c:11:20: warning: unused variable ‘buf’ [-Wunused-variable]
+vxi11core_xdr.c: In function ‘xdr_Device_AddrFamily’:
+vxi11core_xdr.c:21:20: warning: unused variable ‘buf’ [-Wunused-variable]
+vxi11core_xdr.c: In function ‘xdr_Device_Flags’:
+vxi11core_xdr.c:31:20: warning: unused variable ‘buf’ [-Wunused-variable]
+vxi11core_xdr.c: In function ‘xdr_Device_ErrorCode’:
+vxi11core_xdr.c:41:20: warning: unused variable ‘buf’ [-Wunused-variable]
+vxi11core_xdr.c: In function ‘xdr_Device_Error’:
+vxi11core_xdr.c:51:20: warning: unused variable ‘buf’ [-Wunused-variable]
+vxi11core_xdr.c: In function ‘xdr_Create_LinkResp’:
+vxi11core_xdr.c:116:20: warning: unused variable ‘buf’ [-Wunused-variable]
+vxi11core_xdr.c: In function ‘xdr_Device_WriteParms’:
+vxi11core_xdr.c:132:20: warning: unused variable ‘buf’ [-Wunused-variable]
+vxi11core_xdr.c: In function ‘xdr_Device_WriteResp’:
+vxi11core_xdr.c:150:20: warning: unused variable ‘buf’ [-Wunused-variable]
+vxi11core_xdr.c: In function ‘xdr_Device_ReadResp’:
+vxi11core_xdr.c:229:20: warning: unused variable ‘buf’ [-Wunused-variable]
+vxi11core_xdr.c: In function ‘xdr_Device_ReadStbResp’:
+vxi11core_xdr.c:243:20: warning: unused variable ‘buf’ [-Wunused-variable]
+vxi11core_xdr.c: In function ‘xdr_Device_GenericParms’:
+vxi11core_xdr.c:255:20: warning: unused variable ‘buf’ [-Wunused-variable]
+vxi11core_xdr.c: In function ‘xdr_Device_EnableSrqParms’:
+vxi11core_xdr.c:334:20: warning: unused variable ‘buf’ [-Wunused-variable]
+vxi11core_xdr.c: In function ‘xdr_Device_LockParms’:
+vxi11core_xdr.c:348:20: warning: unused variable ‘buf’ [-Wunused-variable]
+vxi11core_xdr.c: In function ‘xdr_Device_DocmdResp’:
+vxi11core_xdr.c:445:20: warning: unused variable ‘buf’ [-Wunused-variable]
+cp ../vxi11/vxi11intr.rpcl .
+rpcgen  vxi11intr.rpcl
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/vxi11/drvVxi11.c 
+../../asyn/vxi11/drvVxi11.c: In function ‘clientIoCall’:
+../../asyn/vxi11/drvVxi11.c:551:20: warning: variable ‘rpcTimeout’ set but not used [-Wunused-but-set-variable]
+../../asyn/vxi11/drvVxi11.c: In function ‘vxiAddressedCmd’:
+../../asyn/vxi11/drvVxi11.c:1329:17: warning: variable ‘lid’ set but not used [-Wunused-but-set-variable]
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/vxi11/E5810Reboot.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/vxi11/E2050Reboot.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/vxi11/TDS3000Reboot.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/devGpib/devCommonGpib.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/devGpib/devSupportGpib.c 
+../../asyn/devGpib/devSupportGpib.c: In function ‘getDeviceInstance’:
+../../asyn/devGpib/devSupportGpib.c:767:13: warning: variable ‘psrqPvt’ set but not used [-Wunused-but-set-variable]
+../../asyn/devGpib/devSupportGpib.c: In function ‘gpibRead’:
+../../asyn/devGpib/devSupportGpib.c:970:16: warning: variable ‘status’ set but not used [-Wunused-but-set-variable]
+../../asyn/devGpib/devSupportGpib.c: In function ‘waitTimeoutCallback’:
+../../asyn/devGpib/devSupportGpib.c:1287:17: warning: variable ‘pdevGpibPvt’ set but not used [-Wunused-but-set-variable]
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../asyn/asynDriver -I../../asyn/asynGpib -I../../asyn/drvAsynSerial -I../../asyn/interfaces -I../../asyn/miscellaneous -I../../asyn/asynPortDriver/exceptions -I../../asyn/asynPortDriver -I../../asyn/devEpics -I../../asyn/asynRecord -I../../asyn/vxi11 -I../../asyn/gsIP488 -I../../asyn/ni1014 -I../../asyn/devGpib -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../../asyn/devGpib/boSRQonOff.c 
+../../asyn/devGpib/boSRQonOff.c: In function ‘boSRQonOff’:
+../../asyn/devGpib/boSRQonOff.c:8:16: warning: variable ‘status’ set but not used [-Wunused-but-set-variable]
+/usr/bin/ar -rc   libasyn.a        asynManager.o epicsInterruptibleSyscall.o asynGpib.o drvAsynSerialPort.o drvAsynIPPort.o drvAsynIPServerPort.o drvAsynUSBPort.o asynInt32Base.o asynInt32SyncIO.o asynInt8ArrayBase.o asynInt8ArraySyncIO.o asynInt16ArrayBase.o asynInt16ArraySyncIO.o asynInt32ArrayBase.o asynInt32ArraySyncIO.o asynUInt32DigitalBase.o asynUInt32DigitalSyncIO.o asynFloat64Base.o asynFloat64SyncIO.o asynFloat32ArrayBase.o asynFloat32ArraySyncIO.o asynFloat64ArrayBase.o asynFloat64ArraySyncIO.o asynOctetBase.o asynOctetSyncIO.o asynGenericPointerBase.o asynGenericPointerSyncIO.o asynEnumBase.o asynEnumSyncIO.o asynCommonSyncIO.o asynStandardInterfacesBase.o asynShellCommands.o asynInterposeCom.o asynInterposeEos.o asynInterposeFlush.o ParamListInvalidIndex.o ParamListParamNotFound.o ParamValNotDefined.o ParamValStringSizeRequestTooBig.o ParamValWrongType.o ParamValValueNotChanged.o paramVal.o paramList.o asynPortDriver.o devAsynOctet.o asynEpicsUtils.o devAsynInt32.o devAsynInt8Array.o devAsynInt16Array.o devAsynInt32Array.o devAsynInt32TimeSeries.o devAsynUInt32Digital.o devAsynFloat64.o devAsynFloat32Array.o devAsynFloat64Array.o devAsynFloat64TimeSeries.o asynRecord.o drvAsyn.o vxi11core_xdr.o drvVxi11.o E5810Reboot.o E2050Reboot.o TDS3000Reboot.o devCommonGpib.o devSupportGpib.o boSRQonOff.o 
+/usr/bin/ranlib libasyn.a
+/usr/bin/g++ -o libasyn.so -shared -fPIC -L/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm                     asynManager.o epicsInterruptibleSyscall.o asynGpib.o drvAsynSerialPort.o drvAsynIPPort.o drvAsynIPServerPort.o drvAsynUSBPort.o asynInt32Base.o asynInt32SyncIO.o asynInt8ArrayBase.o asynInt8ArraySyncIO.o asynInt16ArrayBase.o asynInt16ArraySyncIO.o asynInt32ArrayBase.o asynInt32ArraySyncIO.o asynUInt32DigitalBase.o asynUInt32DigitalSyncIO.o asynFloat64Base.o asynFloat64SyncIO.o asynFloat32ArrayBase.o asynFloat32ArraySyncIO.o asynFloat64ArrayBase.o asynFloat64ArraySyncIO.o asynOctetBase.o asynOctetSyncIO.o asynGenericPointerBase.o asynGenericPointerSyncIO.o asynEnumBase.o asynEnumSyncIO.o asynCommonSyncIO.o asynStandardInterfacesBase.o asynShellCommands.o asynInterposeCom.o asynInterposeEos.o asynInterposeFlush.o ParamListInvalidIndex.o ParamListParamNotFound.o ParamValNotDefined.o ParamValStringSizeRequestTooBig.o ParamValWrongType.o ParamValValueNotChanged.o paramVal.o paramList.o asynPortDriver.o devAsynOctet.o asynEpicsUtils.o devAsynInt32.o devAsynInt8Array.o devAsynInt16Array.o devAsynInt32Array.o devAsynInt32TimeSeries.o devAsynUInt32Digital.o devAsynFloat64.o devAsynFloat32Array.o devAsynFloat64Array.o devAsynFloat64TimeSeries.o asynRecord.o drvAsyn.o vxi11core_xdr.o drvVxi11.o E5810Reboot.o E2050Reboot.o TDS3000Reboot.o devCommonGpib.o devSupportGpib.o boSRQonOff.o    -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom  -lusb-1.0 -lpthread    -lm -lrt -ldl -lgcc
+Installing shared library ../../lib/linux-arm/libasyn.so
+mkdir ../../lib
+mkdir ../../lib/linux-arm
+Installing library ../../lib/linux-arm/libasyn.a
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/asyn/O.linux-arm'
+make[1]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/asyn'
+make -C ./testApp install 
+make[1]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testApp'
+make -C ./src install 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testApp/src'
+perl /usr/local/epics/base/bin/linux-arm/makeMakefile.pl O.linux-arm ../../..
+mkdir O.Common
+make -C O.linux-arm -f ../Makefile TOP=../../.. T_A=linux-arm install
+make[3]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testApp/src/O.linux-arm'
+echo "../O.Common/test.dbd : ../Makefile" >> test.dbd.d
+Expanding dbd
+/usr/local/epics/base/bin/linux-arm/dbExpand  -I. -I.. -I../O.Common -I../../../dbd -I/usr/local/epics/synApps/support/ipac-2-11/dbd -I/usr/local/epics/synApps/support/seq-2-1-9/dbd -I/usr/local/epics/base/dbd -o test.dbd ../testInclude.dbd
+Installing dbd file ../../../dbd/devTestBlock.dbd
+Installing created dbd file ../../../dbd/test.dbd
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../echoDriver.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../addrChangeDriver.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../devTestBlock.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../interposeInterface.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../asynExample.c 
+/usr/bin/ar -rc   libtestSupport.a        echoDriver.o addrChangeDriver.o devTestBlock.o interposeInterface.o asynExample.o 
+/usr/bin/ranlib libtestSupport.a
+/usr/bin/g++ -o libtestSupport.so -shared -fPIC -L/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -L/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm                     echoDriver.o addrChangeDriver.o devTestBlock.o interposeInterface.o asynExample.o    -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread    -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-arm/libtestSupport.so
+Installing library ../../../lib/linux-arm/libtestSupport.a
+perl /usr/local/epics/base/bin/linux-arm/registerRecordDeviceDriver.pl ../O.Common/test.dbd test_registerRecordDeviceDriver /home/pi/Apps/epics/synAppsRobo/support/asyn-4-20 > test.tmp
+mv test.tmp test_registerRecordDeviceDriver.cpp
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall           -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       test_registerRecordDeviceDriver.cpp 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall           -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../testMain.cpp 
+/usr/bin/g++ -o test  -L/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -L/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm                     test_registerRecordDeviceDriver.o testMain.o    -ltestSupport -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   
+Installing created file ../../../bin/linux-arm/test
+make[3]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testApp/src/O.linux-arm'
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testApp/src'
+make -C ./Db install 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testApp/Db'
+perl /usr/local/epics/base/bin/linux-arm/makeMakefile.pl O.linux-arm ../../..
+mkdir O.Common
+make -C O.linux-arm -f ../Makefile TOP=../../.. T_A=linux-arm install
+make[3]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testApp/Db/O.linux-arm'
+Installing db file ../../../db/test.db
+Installing db file ../../../db/testBlock.db
+make[3]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testApp/Db/O.linux-arm'
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testApp/Db'
+make[1]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testApp'
+make -C ./testGpibApp install 
+make[1]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testGpibApp'
+make -C ./src install 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testGpibApp/src'
+perl /usr/local/epics/base/bin/linux-arm/makeMakefile.pl O.linux-arm ../../..
+mkdir O.Common
+make -C O.linux-arm -f ../Makefile TOP=../../.. T_A=linux-arm install
+make[3]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testGpibApp/src/O.linux-arm'
+perl /usr/local/epics/base/bin/linux-arm/makeIncludeDbd.pl testGpibSupport.dbd testGpibInclude.dbd
+echo "../O.Common/testGpibInclude.dbd : ../Makefile" >> testGpib.dbd.d
+Expanding dbd
+Installing dbd file ../../../dbd/devTestGpib.dbd
+Installing created dbd file ../../../dbd/testGpib.dbd
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../devTestGpib.c 
+/usr/bin/ar -rc   libdevTestGpib.a        devTestGpib.o 
+/usr/bin/ranlib libdevTestGpib.a
+/usr/bin/g++ -o libdevTestGpib.so -shared -fPIC -L/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -L/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm                     devTestGpib.o    -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread    -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-arm/libdevTestGpib.so
+Installing library ../../../lib/linux-arm/libdevTestGpib.a
+perl /usr/local/epics/base/bin/linux-arm/registerRecordDeviceDriver.pl ../O.Common/testGpib.dbd testGpib_registerRecordDeviceDriver /home/pi/Apps/epics/synAppsRobo/support/asyn-4-20 > testGpib.tmp
+mv testGpib.tmp testGpib_registerRecordDeviceDriver.cpp
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall           -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       testGpib_registerRecordDeviceDriver.cpp 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall           -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../testGpibMain.cpp 
+/usr/bin/g++ -o testGpib  -L/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -L/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm                     testGpib_registerRecordDeviceDriver.o testGpibMain.o    -ldevTestGpib -ltestSupport -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   
+Installing created file ../../../bin/linux-arm/testGpib
+make[3]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testGpibApp/src/O.linux-arm'
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testGpibApp/src'
+make -C ./Db install 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testGpibApp/Db'
+perl /usr/local/epics/base/bin/linux-arm/makeMakefile.pl O.linux-arm ../../..
+mkdir O.Common
+make -C O.linux-arm -f ../Makefile TOP=../../.. T_A=linux-arm install
+make[3]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testGpibApp/Db/O.linux-arm'
+Installing db file ../../../db/testGpib.db
+make[3]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testGpibApp/Db/O.linux-arm'
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testGpibApp/Db'
+make[1]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testGpibApp'
+make -C ./testGpibSerialApp install 
+make[1]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testGpibSerialApp'
+make -C ./src install 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testGpibSerialApp/src'
+perl /usr/local/epics/base/bin/linux-arm/makeMakefile.pl O.linux-arm ../../..
+mkdir O.Common
+make -C O.linux-arm -f ../Makefile TOP=../../.. T_A=linux-arm install
+make[3]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testGpibSerialApp/src/O.linux-arm'
+perl /usr/local/epics/base/bin/linux-arm/makeIncludeDbd.pl testGpibSerialSupport.dbd testGpibSerialInclude.dbd
+echo "../O.Common/testGpibSerialInclude.dbd : ../Makefile" >> testGpibSerial.dbd.d
+Expanding dbd
+Installing created dbd file ../../../dbd/testGpibSerial.dbd
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall           -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../devTestGpibSerial.c 
+perl /usr/local/epics/base/bin/linux-arm/registerRecordDeviceDriver.pl ../O.Common/testGpibSerial.dbd testGpibSerial_registerRecordDeviceDriver /home/pi/Apps/epics/synAppsRobo/support/asyn-4-20 > testGpibSerial.tmp
+mv testGpibSerial.tmp testGpibSerial_registerRecordDeviceDriver.cpp
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall           -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       testGpibSerial_registerRecordDeviceDriver.cpp 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall           -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../testGpibSerialMain.cpp 
+/usr/bin/g++ -o testGpibSerial  -L/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -L/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm                     devTestGpibSerial.o testGpibSerial_registerRecordDeviceDriver.o testGpibSerialMain.o    -ltestSupport -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   
+Installing created file ../../../bin/linux-arm/testGpibSerial
+make[3]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testGpibSerialApp/src/O.linux-arm'
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testGpibSerialApp/src'
+make[1]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testGpibSerialApp'
+make -C ./testEpicsApp install 
+make[1]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testEpicsApp'
+make -C ./src install 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testEpicsApp/src'
+perl /usr/local/epics/base/bin/linux-arm/makeMakefile.pl O.linux-arm ../../..
+mkdir O.Common
+make -C O.linux-arm -f ../Makefile TOP=../../.. T_A=linux-arm install
+make[3]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testEpicsApp/src/O.linux-arm'
+echo "../O.Common/testEpics.dbd : ../Makefile" >> testEpics.dbd.d
+Expanding dbd
+/usr/local/epics/base/bin/linux-arm/dbExpand  -I. -I.. -I../O.Common -I../../../dbd -I/usr/local/epics/synApps/support/ipac-2-11/dbd -I/usr/local/epics/synApps/support/seq-2-1-9/dbd -I/usr/local/epics/base/dbd -o testEpics.dbd ../testEpicsInclude.dbd
+Installing created dbd file ../../../dbd/testEpics.dbd
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../int32Driver.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../uint32DigitalDriver.c 
+/usr/bin/ar -rc   libtestEpicsSupport.a        int32Driver.o uint32DigitalDriver.o 
+/usr/bin/ranlib libtestEpicsSupport.a
+/usr/bin/g++ -o libtestEpicsSupport.so -shared -fPIC -L/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -L/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm                     int32Driver.o uint32DigitalDriver.o    -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread    -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-arm/libtestEpicsSupport.so
+Installing library ../../../lib/linux-arm/libtestEpicsSupport.a
+perl /usr/local/epics/base/bin/linux-arm/registerRecordDeviceDriver.pl ../O.Common/testEpics.dbd testEpics_registerRecordDeviceDriver /home/pi/Apps/epics/synAppsRobo/support/asyn-4-20 > testEpics.tmp
+mv testEpics.tmp testEpics_registerRecordDeviceDriver.cpp
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall           -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       testEpics_registerRecordDeviceDriver.cpp 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall           -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../testEpicsMain.cpp 
+/usr/bin/g++ -o testEpics  -L/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -L/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm                     testEpics_registerRecordDeviceDriver.o testEpicsMain.o    -ltestEpicsSupport -ltestSupport -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   
+Installing created file ../../../bin/linux-arm/testEpics
+make[3]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testEpicsApp/src/O.linux-arm'
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testEpicsApp/src'
+make -C ./Db install 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testEpicsApp/Db'
+perl /usr/local/epics/base/bin/linux-arm/makeMakefile.pl O.linux-arm ../../..
+mkdir O.Common
+make -C O.linux-arm -f ../Makefile TOP=../../.. T_A=linux-arm install
+make[3]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testEpicsApp/Db/O.linux-arm'
+Installing db file ../../../db/devInt32.db
+Installing db file ../../../db/devDigital.db
+Installing db file ../../../db/devOctet.db
+make[3]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testEpicsApp/Db/O.linux-arm'
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testEpicsApp/Db'
+make[1]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testEpicsApp'
+make -C ./testManagerApp install 
+make[1]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testManagerApp'
+perl /usr/local/epics/base/bin/linux-arm/makeMakefile.pl O.linux-arm ../..
+mkdir O.Common
+make -C O.linux-arm -f ../Makefile TOP=../.. T_A=linux-arm install
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testManagerApp/O.linux-arm'
+echo "../O.Common/testManager.dbd : ../Makefile" >> testManager.dbd.d
+Expanding dbd
+/usr/local/epics/base/bin/linux-arm/dbExpand  -I. -I.. -I../O.Common -I../../dbd -I/usr/local/epics/synApps/support/ipac-2-11/dbd -I/usr/local/epics/synApps/support/seq-2-1-9/dbd -I/usr/local/epics/base/dbd -o testManager.dbd ../testManagerInclude.dbd
+Installing created dbd file ../../dbd/testManager.dbd
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall           -MMD -I. -I../O.Common -I. -I.. -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../testManagerDriver.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall           -MMD -I. -I../O.Common -I. -I.. -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../testManager.c 
+perl /usr/local/epics/base/bin/linux-arm/registerRecordDeviceDriver.pl ../O.Common/testManager.dbd testManager_registerRecordDeviceDriver /home/pi/Apps/epics/synAppsRobo/support/asyn-4-20 > testManager.tmp
+mv testManager.tmp testManager_registerRecordDeviceDriver.cpp
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall           -MMD -I. -I../O.Common -I. -I.. -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       testManager_registerRecordDeviceDriver.cpp 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall           -MMD -I. -I../O.Common -I. -I.. -I../../include/os/Linux -I../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../testManagerMain.cpp 
+/usr/bin/g++ -o testManager  -L/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -L/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm                     testManagerDriver.o testManager.o testManager_registerRecordDeviceDriver.o testManagerMain.o    -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   
+Installing created file ../../bin/linux-arm/testManager
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testManagerApp/O.linux-arm'
+make[1]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testManagerApp'
+make -C ./testAsynPortDriverApp install 
+make[1]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testAsynPortDriverApp'
+make -C ./src install 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testAsynPortDriverApp/src'
+perl /usr/local/epics/base/bin/linux-arm/makeMakefile.pl O.linux-arm ../../..
+mkdir O.Common
+make -C O.linux-arm -f ../Makefile TOP=../../.. T_A=linux-arm install
+make[3]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testAsynPortDriverApp/src/O.linux-arm'
+echo "../O.Common/testAsynPortDriver.dbd : ../Makefile" >> testAsynPortDriver.dbd.d
+Expanding dbd
+/usr/local/epics/base/bin/linux-arm/dbExpand  -I. -I.. -I../O.Common -I../../../dbd -I/usr/local/epics/synApps/support/ipac-2-11/dbd -I/usr/local/epics/synApps/support/seq-2-1-9/dbd -I/usr/local/epics/base/dbd -o testAsynPortDriver.dbd ../testAsynPortDriverInclude.dbd
+Installing created dbd file ../../../dbd/testAsynPortDriver.dbd
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../testAsynPortDriver.cpp 
+/usr/bin/ar -rc   libtestAsynPortDriverSupport.a        testAsynPortDriver.o 
+/usr/bin/ranlib libtestAsynPortDriverSupport.a
+/usr/bin/g++ -o libtestAsynPortDriverSupport.so -shared -fPIC -L/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -L/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm                     testAsynPortDriver.o    -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread    -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-arm/libtestAsynPortDriverSupport.so
+Installing library ../../../lib/linux-arm/libtestAsynPortDriverSupport.a
+perl /usr/local/epics/base/bin/linux-arm/registerRecordDeviceDriver.pl ../O.Common/testAsynPortDriver.dbd testAsynPortDriver_registerRecordDeviceDriver /home/pi/Apps/epics/synAppsRobo/support/asyn-4-20 > testAsynPortDriver.tmp
+mv testAsynPortDriver.tmp testAsynPortDriver_registerRecordDeviceDriver.cpp
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall           -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       testAsynPortDriver_registerRecordDeviceDriver.cpp 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall           -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../testAsynPortDriverMain.cpp 
+/usr/bin/g++ -o testAsynPortDriver  -L/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -L/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm                     testAsynPortDriver_registerRecordDeviceDriver.o testAsynPortDriverMain.o    -ltestAsynPortDriverSupport -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   
+Installing created file ../../../bin/linux-arm/testAsynPortDriver
+make[3]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testAsynPortDriverApp/src/O.linux-arm'
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testAsynPortDriverApp/src'
+make -C ./Db install 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testAsynPortDriverApp/Db'
+perl /usr/local/epics/base/bin/linux-arm/makeMakefile.pl O.linux-arm ../../..
+mkdir O.Common
+make -C O.linux-arm -f ../Makefile TOP=../../.. T_A=linux-arm install
+make[3]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testAsynPortDriverApp/Db/O.linux-arm'
+Installing db file ../../../db/testAsynPortDriver.db
+make[3]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testAsynPortDriverApp/Db/O.linux-arm'
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testAsynPortDriverApp/Db'
+make[1]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testAsynPortDriverApp'
+make -C ./testErrorsApp install 
+make[1]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testErrorsApp'
+make -C ./src install 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testErrorsApp/src'
+perl /usr/local/epics/base/bin/linux-arm/makeMakefile.pl O.linux-arm ../../..
+mkdir O.Common
+make -C O.linux-arm -f ../Makefile TOP=../../.. T_A=linux-arm install
+make[3]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testErrorsApp/src/O.linux-arm'
+echo "../O.Common/testErrors.dbd : ../Makefile" >> testErrors.dbd.d
+Expanding dbd
+/usr/local/epics/base/bin/linux-arm/dbExpand  -I. -I.. -I../O.Common -I../../../dbd -I/usr/local/epics/synApps/support/ipac-2-11/dbd -I/usr/local/epics/synApps/support/seq-2-1-9/dbd -I/usr/local/epics/base/dbd -o testErrors.dbd ../testErrorsInclude.dbd
+Installing created dbd file ../../../dbd/testErrors.dbd
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../testErrors.cpp 
+../testErrors.cpp:36:1: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../testErrors.cpp:36:1: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../testErrors.cpp:36:1: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../testErrors.cpp:36:1: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../testErrors.cpp:36:1: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../testErrors.cpp:36:1: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../testErrors.cpp:43:1: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../testErrors.cpp:43:1: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../testErrors.cpp:43:1: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../testErrors.cpp:43:1: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../testErrors.cpp:43:1: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../testErrors.cpp:43:1: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../testErrors.cpp:43:1: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../testErrors.cpp:43:1: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../testErrors.cpp:43:1: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../testErrors.cpp:43:1: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../testErrors.cpp:43:1: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../testErrors.cpp:43:1: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../testErrors.cpp:43:1: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../testErrors.cpp:43:1: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../testErrors.cpp:43:1: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../testErrors.cpp:43:1: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../testErrors.cpp:47:79: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../testErrors.cpp:47:79: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../testErrors.cpp:47:79: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/usr/bin/ar -rc   libtestErrorsSupport.a        testErrors.o 
+/usr/bin/ranlib libtestErrorsSupport.a
+/usr/bin/g++ -o libtestErrorsSupport.so -shared -fPIC -L/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -L/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm                     testErrors.o    -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread    -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-arm/libtestErrorsSupport.so
+Installing library ../../../lib/linux-arm/libtestErrorsSupport.a
+perl /usr/local/epics/base/bin/linux-arm/registerRecordDeviceDriver.pl ../O.Common/testErrors.dbd testErrors_registerRecordDeviceDriver /home/pi/Apps/epics/synAppsRobo/support/asyn-4-20 > testErrors.tmp
+mv testErrors.tmp testErrors_registerRecordDeviceDriver.cpp
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall           -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       testErrors_registerRecordDeviceDriver.cpp 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall           -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../testErrorsMain.cpp 
+/usr/bin/g++ -o testErrors  -L/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -L/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm                     testErrors_registerRecordDeviceDriver.o testErrorsMain.o    -ltestErrorsSupport -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   
+Installing created file ../../../bin/linux-arm/testErrors
+make[3]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testErrorsApp/src/O.linux-arm'
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testErrorsApp/src'
+make -C ./Db install 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testErrorsApp/Db'
+perl /usr/local/epics/base/bin/linux-arm/makeMakefile.pl O.linux-arm ../../..
+mkdir O.Common
+make -C O.linux-arm -f ../Makefile TOP=../../.. T_A=linux-arm install
+make[3]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testErrorsApp/Db/O.linux-arm'
+Installing db file ../../../db/testErrors.db
+make[3]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testErrorsApp/Db/O.linux-arm'
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testErrorsApp/Db'
+make[1]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testErrorsApp'
+make -C ./testIPServerApp install 
+make[1]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testIPServerApp'
+make -C ./src install 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testIPServerApp/src'
+perl /usr/local/epics/base/bin/linux-arm/makeMakefile.pl O.linux-arm ../../..
+mkdir O.Common
+make -C O.linux-arm -f ../Makefile TOP=../../.. T_A=linux-arm install
+make[3]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testIPServerApp/src/O.linux-arm'
+echo "../O.Common/testIPServer.dbd : ../Makefile" >> testIPServer.dbd.d
+Expanding dbd
+/usr/local/epics/base/bin/linux-arm/dbExpand  -I. -I.. -I../O.Common -I../../../dbd -I/usr/local/epics/synApps/support/ipac-2-11/dbd -I/usr/local/epics/synApps/support/seq-2-1-9/dbd -I/usr/local/epics/base/dbd -o testIPServer.dbd ../testIPServerInclude.dbd
+Installing created dbd file ../../../dbd/testIPServer.dbd
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../ipEchoServer.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../ipEchoServer2.c 
+preprocessing ../ipSNCServer.st
+/usr/bin/gcc -x c -E  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../ipSNCServer.st > ipSNCServer.i
+converting ipSNCServer.i
+/usr/local/epics/synApps/support/seq-2-1-9/bin/linux-arm/snc     ipSNCServer.i -o ipSNCServer.c.tmp
+mv ipSNCServer.c.tmp ipSNCServer.c
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ipSNCServer.c 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall          -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../asynPortTest.cpp 
+/usr/bin/ar -rc   libtestIPServerSupport.a        ipEchoServer.o ipEchoServer2.o ipSNCServer.o asynPortTest.o 
+/usr/bin/ranlib libtestIPServerSupport.a
+/usr/bin/g++ -o libtestIPServerSupport.so -shared -fPIC -L/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -L/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm -L/home/pi/Apps/epics/synAppsRobo/support/seq-2-1-9/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/synAppsRobo/support/seq-2-1-9/lib/linux-arm                     ipEchoServer.o ipEchoServer2.o ipSNCServer.o asynPortTest.o    -lasyn -lseq -lpv -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread    -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-arm/libtestIPServerSupport.so
+Installing library ../../../lib/linux-arm/libtestIPServerSupport.a
+perl /usr/local/epics/base/bin/linux-arm/registerRecordDeviceDriver.pl ../O.Common/testIPServer.dbd testIPServer_registerRecordDeviceDriver /home/pi/Apps/epics/synAppsRobo/support/asyn-4-20 > testIPServer.tmp
+mv testIPServer.tmp testIPServer_registerRecordDeviceDriver.cpp
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall           -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       testIPServer_registerRecordDeviceDriver.cpp 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500            -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall           -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/usr/local/epics/synApps/support/ipac-2-11/include  -I/usr/local/epics/synApps/support/seq-2-1-9/include   -I/usr/local/epics/base/include/os/Linux -I/usr/local/epics/base/include       ../testIPServerMain.cpp 
+/usr/bin/g++ -o testIPServer  -L/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -L/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm -L/home/pi/Apps/epics/synAppsRobo/support/seq-2-1-9/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/base-3.14.12.3/lib/linux-arm -Wl,-rpath,/home/pi/Apps/epics/synAppsRobo/support/seq-2-1-9/lib/linux-arm                     testIPServer_registerRecordDeviceDriver.o testIPServerMain.o    -ltestIPServerSupport -lasyn -lseq -lpv -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   
+Installing created file ../../../bin/linux-arm/testIPServer
+make[3]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testIPServerApp/src/O.linux-arm'
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testIPServerApp/src'
+make -C ./Db install 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testIPServerApp/Db'
+perl /usr/local/epics/base/bin/linux-arm/makeMakefile.pl O.linux-arm ../../..
+mkdir O.Common
+make -C O.linux-arm -f ../Makefile TOP=../../.. T_A=linux-arm install
+make[3]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testIPServerApp/Db/O.linux-arm'
+Installing db file ../../../db/testIPServer.db
+Installing db file ../../../db/asynPortTest.db
+make[3]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testIPServerApp/Db/O.linux-arm'
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testIPServerApp/Db'
+make[1]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/testIPServerApp'
+make -C ./iocBoot install 
+make[1]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/iocBoot'
+make -C ./ioctest install 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/iocBoot/ioctest'
+make[2]: Nothing to be done for `install'.
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/iocBoot/ioctest'
+make -C ./ioctestAsynPortDriver install 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/iocBoot/ioctestAsynPortDriver'
+make[2]: Nothing to be done for `install'.
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/iocBoot/ioctestAsynPortDriver'
+make -C ./ioctestConnect install 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/iocBoot/ioctestConnect'
+make[2]: Nothing to be done for `install'.
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/iocBoot/ioctestConnect'
+make -C ./ioctestEpics install 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/iocBoot/ioctestEpics'
+make[2]: Nothing to be done for `install'.
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/iocBoot/ioctestEpics'
+make -C ./ioctestErrors install 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/iocBoot/ioctestErrors'
+make[2]: Nothing to be done for `install'.
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/iocBoot/ioctestErrors'
+make -C ./ioctestGpib install 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/iocBoot/ioctestGpib'
+make[2]: Nothing to be done for `install'.
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/iocBoot/ioctestGpib'
+make -C ./ioctestGpibSerial install 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/iocBoot/ioctestGpibSerial'
+make[2]: Nothing to be done for `install'.
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/iocBoot/ioctestGpibSerial'
+make -C ./ioctestGpibSerialVx install 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/iocBoot/ioctestGpibSerialVx'
+make[2]: Nothing to be done for `install'.
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/iocBoot/ioctestGpibSerialVx'
+make -C ./ioctestGpibVx install 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/iocBoot/ioctestGpibVx'
+make[2]: Nothing to be done for `install'.
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/iocBoot/ioctestGpibVx'
+make -C ./ioctestIPServer install 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/iocBoot/ioctestIPServer'
+make[2]: Nothing to be done for `install'.
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/iocBoot/ioctestIPServer'
+make -C ./ioctestManager install 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/iocBoot/ioctestManager'
+make[2]: Nothing to be done for `install'.
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/iocBoot/ioctestManager'
+make -C ./ioctestUSB install 
+make[2]: Entering directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/iocBoot/ioctestUSB'
+make[2]: Nothing to be done for `install'.
+make[2]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/iocBoot/ioctestUSB'
+make[1]: Leaving directory `/home/pi/Apps/epics/synAppsRobo/support/asyn-4-20/iocBoot'
+#done CMD: make
+Thu Feb  7 20:41:16 CST 2013

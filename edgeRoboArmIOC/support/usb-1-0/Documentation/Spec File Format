@@ -1,0 +1,59 @@
+#A Spec file contains a list of lines defining the links between asyn parameters
+#and the data that the USB device sends.
+
+#A simple definition looks like the following:
+TEST_NAME [0,3] -> Int32
+
+#This defines a parameter called TEST_NAME as the Integer created from reading
+#the first four bytes of the transferred data.
+
+#You can use as much or as little white space as you want
+TEST_2[4]->Int32
+TEST_3   [5,  6]   ->   Int32
+
+
+#Other supported types:
+
+#UInt32
+TEST_SCALAR [7] -> UInt32
+
+#UInt32Digital
+TEST_BUTTON [8] -> UInt32Digital
+
+#Int8Array (Creates an array of length 4)
+TEST_8ARRAY [9, 12] -> Int8Array
+
+#Int16Array (Creates an array of length 2)
+TEST_16ARRAY [14, 17] -> Int16Array
+
+#Int32Array (Creates an array of length 2)
+TEST_32ARRAY [18, 25] -> Int32Array
+
+#Float64	
+TEST_FLOAT [26, 33] -> Float64
+
+#Float32Array (Creates an array of length 2)
+TEST_32FARRAY [34, 41] -> Float32Array
+
+#Float64Array (Creates an array of length 2)
+TEST_64FARRAY [42, 57] -> Float64Array
+
+
+#There are two optional definitions that are supported 
+#by some types
+
+#Masks, to segregate data that resides in the same byte
+#    Supported by: Int32, UInt32, UInt32Digital
+TEST_BUTTON2 [58] -> UInt32Digital /0x01
+TEST_BUTTON3 [58] -> UInt32Digital /0x08
+
+
+#And shifts, to align data to a correct representation
+TEST_UPPER_HALF [59] >> 4 -> Int32 /0x0F
+
+#Shifts are applied first, so remember to write your masks accordingly
+
+
+
+#Definitions don't need to be in sequence
+TEST_BUTTON4 [13] -> UInt32Digital /0x10

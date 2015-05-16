@@ -1,0 +1,2 @@
+registrar(drvAsynUSBPortRegisterCommands)
+include "asyn.dbd"

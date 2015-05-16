@@ -1,0 +1,29 @@
+#FILENAME:      RELEASE
+#USAGE:         Specify directory paths to synApps support modules
+#Version:       $Revision$
+#Modified By:   $Author$
+#Last Modified: $Date$
+#HeadURL:       $URL$
+
+# Status: working toward synApps 5.6
+
+#NOTES
+#     - To remove modules from the build, delete or comment out the
+#       module name.
+
+include $(TOP)/configure/SUPPORT.$(EPICS_HOST_ARCH)
+include $(TOP)/configure/EPICS_BASE.$(EPICS_HOST_ARCH) 
+
+#https://svn.aps.anl.gov/epics/asyn/
+ASYN=$(SUPPORT)/asyn-4-20
+AUTOSAVE=$(SUPPORT)/autosave-4-8
+CALC=$(SUPPORT)/calc-2-9
+#https://svn.aps.anl.gov/epics/ipac/
+IPAC=$(SUPPORT)/ipac-2-11
+IP=$(SUPPORT)/ip-2-13
+#http://www-csr.bessy.de/control/SoftDist/sequencer
+SNCSEQ=$(SUPPORT)/seq-2-1-9
+SSCAN=$(SUPPORT)/sscan-2-7
+USB=$(SUPPORT)/usb-1-0
+XXX=$(SUPPORT)/xxx-5-6
+

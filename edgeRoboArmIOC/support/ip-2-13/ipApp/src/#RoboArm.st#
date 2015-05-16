@@ -1,0 +1,144 @@
+program RoboArm ("P=RoboARM:, A=A1")
+
+/*
+ *  Jeffrey Gebhardt
+ *  BCDA APS
+ *  September 11, 2012
+ *
+ */
+
+#define MAX_MOVES   5
+%% #include "stdlib.h"
+%% #include "string.h"
+
+int i = 0;
+int j1, j2, j3, j4, j5, j6;
+
+int start_moves;
+assign start_moves to "{P}{A}start_moves.VAL";
+/*monitor start_moves;*/
+
+int stop_moves;
+assign stop_moves to "{P}{A}all_stop.PROC";
+monitor stop_moves;
+evflag stopFlag;
+sync stop_moves stopFlag;
+
+int send_cmd = 1;
+assign send_cmd to "{P}{A}send_cmd_seq.PROC";
+
+int grip_seq;
+assign grip_seq to "{P}{A}grip_move_seq.VAL";
+int grip_moves[MAX_MOVES];
+assign grip_moves to
+                {"{P}{A}grip_move_1.VAL"
+                 "{P}{A}grip_move_2.VAL"
+                 "{P}{A}grip_move_3.VAL"
+                 "{P}{A}grip_move_4.VAL"
+                 "{P}{A}grip_move_5.VAL"};
+double grip_delays[MAX_MOVES];
+assign grip_delays to
+                {"{P}{A}grip_delay_1.VAL"
+                 "{P}{A}grip_delay_2.VAL"
+                 "{P}{A}grip_delay_3.VAL"
+                 "{P}{A}grip_delay_4.VAL"
+                 "{P}{A}grip_delay_5.VAL"};
+
+int wrist_seq;
+assign wrist_seq to "{P}{A}wrist_move_seq.VAL";
+int wrist_moves[MAX_MOVES];
+assign wrist_moves to
+                {"{P}{A}wrist_move_1.VAL"
+                 "{P}{A}wrist_move_2.VAL"
+                 "{P}{A}wrist_move_3.VAL"
+                 "{P}{A}wrist_move_4.VAL"
+                 "{P}{A}wrist_move_5.VAL"};
+double wrist_delays[MAX_MOVES];
+assign wrist_delays to
+                {"{P}{A}wrist_delay_1.VAL"
+                 "{P}{A}wrist_delay_2.VAL"
+                 "{P}{A}wrist_delay_3.VAL"
+                 "{P}{A}wrist_delay_4.VAL"
+                 "{P}{A}wrist_delay_5.VAL"};
+
+int elbow_seq;
+assign elbow_seq to "{P}{A}elbow_move_seq.VAL";
+int elbow_moves[MAX_MOVES];
+assign elbow_moves to
+                {"{P}{A}elbow_move_1.VAL"
+                 "{P}{A}elbow_move_2.VAL"
+                 "{P}{A}elbow_move_3.VAL"
+                 "{P}{A}elbow_move_4.VAL"
+                 "{P}{A}elbow_move_5.VAL"};
+double elbow_delays[MAX_MOVES];
+assign elbow_delays to
+                {"{P}{A}elbow_delay_1.VAL"
+                 "{P}{A}elbow_delay_2.VAL"
+                 "{P}{A}elbow_delay_3.VAL"
+                 "{P}{A}elbow_delay_4.VAL"
+                 "{P}{A}elbow_delay_5.VAL"};
+
+int shoulder_seq;
+assign shoulder_seq to "{P}{A}shoulder_move_seq.VAL";
+int shoulder_moves[MAX_MOVES];
+assign shoulder_moves to
+                {"{P}{A}shoulder_move_1.VAL"
+                 "{P}{A}shoulder_move_2.VAL"
+                 "{P}{A}shoulder_move_3.VAL"
+                 "{P}{A}shoulder_move_4.VAL"
+                 "{P}{A}shoulder_move_5.VAL"};
+double shoulder_delays[MAX_MOVES];
+assign shoulder_delays to
+                {"{P}{A}shoulder_delay_1.VAL"
+                 "{P}{A}shoulder_delay_2.VAL"
+                 "{P}{A}shoulder_delay_3.VAL"
+                 "{P}{A}shoulder_delay_4.VAL"
+                 "{P}{A}shoulder_delay_5.VAL"};
+
+int base_seq;
+assign base_seq to "{P}{A}base_move_seq.VAL";
+int base_moves[MAX_MOVES];
+assign base_moves to
+                {"{P}{A}base_move_1.VAL"
+                 "{P}{A}base_move_2.VAL"
+                 "{P}{A}base_move_3.VAL"
+                 "{P}{A}base_move_4.VAL"
+                 "{P}{A}base_move_4.VAL"};
+double base_delays[MAX_MOVES];
+assign base_delays to
+                {"{P}{A}base_delay_1.VAL"
+                 "{P}{A}base_delay_2.VAL"
+                 "{P}{A}base_delay_3.VAL"
+                 "{P}{A}base_delay_4.VAL"
+                 "{P}{A}base_delay_4.VAL"};
+
+int led_seq;
+assign led_seq to "{P}{A}led_onoff_seq.VAL";
+int led_onoffs[MAX_MOVES];
+assign led_onoffs to
+                {"{P}{A}led_onoff_1.VAL"
+                 "{P}{A}led_onoff_2.VAL"
+                 "{P}{A}led_onoff_3.VAL"
+                 "{P}{A}led_onoff_4.VAL"
+                 "{P}{A}led_onoff_5.VAL"};
+double led_delays[MAX_MOVES];
+assign led_delays to
+                {"{P}{A}led_delay_1.VAL"
+                 "{P}{A}led_delay_2.VAL"
+                 "{P}{A}led_delay_3.VAL"
+                 "{P}{A}led_delay_4.VAL"
+                 "{P}{A}led_delay_5.VAL"};
+
+ss coord_move {
+    state fu {
+        when() {
+            start_moves = 0;
+            pvPut(start_moves);
+            printf{"Hello Jeff:  %d\n", start_moves);
+            delay(2.0);
+            start_moves = 1;
+            pvPut(start_moves);
+        }
+    } state fu
+}
+

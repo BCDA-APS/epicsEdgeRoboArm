@@ -1,0 +1,27 @@
+#Logictech Extreme3D Pro Joystick	Vendor: 0x046D	Product: 0xC215
+
+#Joystick
+HORIZONTAL_STATE    [0, 1]       -> UInt16    /0x03FF
+VERTICAL_STATE      [1, 2] >> 2  -> UInt16    /0x03FF
+ROTATION_STATE		[3]          -> UInt8
+
+
+#Toggles
+HAT_STATE           [2]    >> 4  -> UInt8     /0x0F
+SWITCH_STATE        [5]          -> UInt8
+
+
+#Buttons
+TRIGGER_PRESSED     [4]          ->	Bool      /0x01
+LBUTTON_PRESSED     [4]          -> Bool      /0x02
+BUTTON3_PRESSED     [4]          -> Bool      /0x04
+BUTTON4_PRESSED     [4]          -> Bool      /0x08
+BUTTON5_PRESSED     [4]          -> Bool      /0x10
+BUTTON6_PRESSED     [4]          -> Bool      /0x20
+BUTTON7_PRESSED     [4]          -> Bool      /0x40
+BUTTON8_PRESSED     [4]          -> Bool      /0x80
+
+BUTTON9_PRESSED     [6]          -> Bool      /0x01
+BUTTON10_PRESSED    [6]          -> Bool      /0x02
+BUTTON11_PRESSED    [6]          -> Bool      /0x04
+BUTTON12_PRESSED    [6]          -> Bool      /0x08

@@ -1,0 +1,109 @@
+
+record(mbbo,  "$(P)$(A)grip_move") {
+  field(DESC, "grip motion")
+  field(DTYP, "Raw Soft Channel")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "CLOSE")
+  field(ONVL, "1")
+  field(TWST, "OPEN")
+  field(TWVL, "2")
+  field(FLNK, "$(P)$(A)send_cmd.PROC  PP MS")
+}
+
+record(mbbo,  "$(P)$(A)wrist_move") {
+  field(DESC, "wrist motion")
+  field(DTYP, "Raw Soft Channel")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "4")
+  field(TWST, "DOWN")
+  field(TWVL, "8")
+  field(FLNK, "$(P)$(A)send_cmd.PROC  PP MS")
+}
+
+record(mbbo,  "$(P)$(A)elbow_move") {
+  field(DESC, "elbow motion")
+  field(DTYP, "Raw Soft Channel")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "16")
+  field(TWST, "DOWN")
+  field(TWVL, "32")
+  field(FLNK, "$(P)$(A)send_cmd.PROC  PP MS")
+}
+
+record(mbbo,  "$(P)$(A)shoulder_move") {
+  field(DESC, "shoulder motion")
+  field(DTYP, "Raw Soft Channel")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "64")
+  field(TWST, "DOWN")
+  field(TWVL, "128")
+  field(FLNK, "$(P)$(A)send_cmd.PROC  PP MS")
+}
+
+record(mbbo,  "$(P)$(A)base_move") {
+  field(DESC, "base motion")
+  field(DTYP, "Raw Soft Channel")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "ClockWise")
+  field(ONVL, "1")
+  field(TWST, "CounterClockWise")
+  field(TWVL, "2")
+  field(FLNK, "$(P)$(A)send_cmd.PROC  PP MS")
+}
+
+record(bo,    "$(P)$(A)led_onoff") {
+  field(DESC, "LED on/off")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  field(FLNK, "$(P)$(A)send_cmd.PROC  PP MS")
+}
+
+record(transform, "$(P)$(A)all_stop") {
+  field(DESC, "send the stop motion command")
+  field(CLCA, "0")
+  field(CLCB, "0")
+  field(CLCC, "0")
+  field(CLCD, "0")
+  field(CLCE, "0")
+  field(CLCF, "1")
+  field(OUTA, "$(P)$(A)grip_move.VAL       NPP NMS")
+  field(OUTB, "$(P)$(A)wrist_move.VAL      NPP NMS")
+  field(OUTC, "$(P)$(A)elbow_move.VAL      NPP NMS")
+  field(OUTD, "$(P)$(A)shoulder_move.VAL   NPP NMS")
+  field(OUTE, "$(P)$(A)base_move.VAL       NPP NMS")
+  field(OUTF, "$(P)$(A)send_cmd.PROC        PP  MS")
+}
+
+record(calc,  "$(P)$(A)send_cmd") {
+  field(DESC, "send the motion command")
+  field(INPA, "$(P)$(A)grip_move.RVAL      NPP NMS")
+  field(INPB, "$(P)$(A)wrist_move.RVAL     NPP NMS")
+  field(INPC, "$(P)$(A)elbow_move.RVAL     NPP NMS")
+  field(INPD, "$(P)$(A)shoulder_move.RVAL  NPP NMS")
+  field(CALC, "A+B+C+D")
+  field(FLNK, "$(P)$(A)send_cmd_2.PROC      PP  MS") 
+}
+
+record(scalcout, "$(P)$(A)send_cmd_2") {
+  field(DESC, "send the motion command")
+  field(INPA, "$(P)$(A)send_cmd.VAL        NPP NMS")
+  field(INPB, "$(P)$(A)base_move.RVAL      NPP NMS")
+  field(INPC, "$(P)$(A)led_onoff.VAL       NPP NMS")
+  field(CALC, "STR(A)+' '+STR(B)+' '+STR(C)")
+  field(OUT,  "$(P)$(A)send_cmd_str.VAL     PP  MS") 
+}
+
+record(stringout, "$(P)$(A)send_cmd_str") {
+  field(DESC, "send the motion command string")
+  field(DTYP, "asyn robo stringParm")
+  field(OUT, "@asyn($(PORT))")
+}
+

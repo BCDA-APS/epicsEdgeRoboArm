@@ -1,0 +1,233 @@
+record(bi, "$(P)$(A)Button11_State")
+{
+	field(DTYP, "asynInt32")
+	field(SCAN, "I/O Intr")
+	field(INP, "@asyn($(INPORT), 0, 0)BUTTON11_PRESSED")
+	field(FLNK, "$(P)$(A)led_calc")
+}
+
+record(calcout, "$(P)$(A)led_calc")
+{
+	field(INPA, "$(P)$(A)Button11_State.VAL NPP")
+	field(CALC, "A")
+	field(OUT, "$(P)$(A)led_onoff PP")
+}
+
+
+record(bi, "$(P)$(A)Trigger_State")
+{
+	field(DTYP, "asynInt32")
+	field(SCAN, "I/O Intr")
+	field(INP, "@asyn($(INPORT), 0, 0)TRIGGER_PRESSED")
+	field(FLNK, "$(P)$(A)grip_calc")
+}
+
+record(bi, "$(P)$(A)LButton_State")
+{
+	field(DTYP, "asynInt32")
+	field(SCAN, "I/O Intr")
+	field(INP, "@asyn($(INPORT), 0, 0)LBUTTON_PRESSED")
+	field(FLNK, "$(P)$(A)grip_calc")
+}
+
+record(calcout, "$(P)$(A)grip_calc")
+{
+	field(INPA, "$(P)$(A)Trigger_State.VAL NPP")
+	field(INPB, "$(P)$(A)LButton_State.VAL NPP")
+	field(CALC, "2 * B + A")
+	field(OUT, "$(P)$(A)grip_move PP")
+}
+
+record(ai, "$(P)$(A)Switch_State")
+{
+	field(DTYP, "asynInt32")
+	field(SCAN, "I/O Intr")
+	field(INP, "@asyn($(INPORT), 0, 0)SWITCH_STATE")
+	field(FLNK, "$(P)$(A)move_lock")
+}
+
+record(calcout, "$(P)$(A)move_lock")
+{
+	field(INPA, "$(P)$(A)Switch_State.VAL NPP")
+	field(INPB, "$(P)$(A)move_lock.VAL NPP")
+	field(CALC, "B ? (A > 100) : (A > 150)")
+}
+
+record(ai, "$(P)$(A)Rotation_State")
+{
+	field(DTYP, "asynInt32")
+	field(SCAN, "I/O Intr")
+	field(INP, "@asyn($(INPORT), 0, 0)ROTATION_STATE")
+	field(FLNK, "$(P)$(A)base_calc PP")
+}
+
+record(calcout, "$(P)$(A)base_calc")
+{
+	field(INPA, "$(P)$(A)Rotation_State.VAL NPP")
+	field(INPB, "$(P)$(A)move_lock.VAL NPP")
+	field(CALC, "B ? 0 : 2 * (A < 100) + (A > 150)")
+	field(OUT, "$(P)$(A)base_move PP")
+}
+
+record(ai, "$(P)$(A)Vertical_State")
+{
+	field(DTYP, "asynInt32")
+	field(SCAN, "I/O Intr")
+	field(INP, "@asyn($(INPORT), 0, 0)VERTICAL_STATE")
+	field(FLNK, "$(P)$(A)shoulder_calc PP")
+}
+
+record(calcout, "$(P)$(A)shoulder_calc")
+{
+	field(INPA, "$(P)$(A)Vertical_State.VAL NPP")
+	field(CALC, "2 * (A < 450) + (A > 600)")
+	field(OUT, "$(P)$(A)shoulder_move PP")
+}
+
+record(ai, "$(P)$(A)Hat_State")
+{
+	field(DTYP, "asynInt32")
+	field(SCAN, "I/O Intr")
+	field(INP, "@asyn($(INPORT), 0, 0)HAT_STATE")
+	field(FLNK, "$(P)$(A)wrist_calc PP")
+}
+
+record(calcout, "$(P)$(A)wrist_calc")
+{
+	field(INPA, "$(P)$(A)Hat_State.VAL NPP")
+	field(CALC, "(A = 0) + 2 * (A = 4)")
+	field(OUT, "$(P)$(A)wrist_move PP")
+}
+
+record(bi, "$(P)$(A)Button3_State")
+{
+	field(DTYP, "asynInt32")
+	field(SCAN, "I/O Intr")
+	field(INP, "@asyn($(INPORT), 0, 0)BUTTON3_PRESSED")
+	field(FLNK, "$(P)$(A)elbow_calc")
+}
+
+record(bi, "$(P)$(A)Button5_State")
+{
+	field(DTYP, "asynInt32")
+	field(SCAN, "I/O Intr")
+	field(INP, "@asyn($(INPORT), 0, 0)BUTTON5_PRESSED")
+	field(FLNK, "$(P)$(A)elbow_calc")
+}
+
+record(calcout, "$(P)$(A)elbow_calc")
+{
+	field(INPA, "$(P)$(A)Button3_State.VAL NPP")
+	field(INPB, "$(P)$(A)Button5_State.VAL NPP")
+	field(CALC, "2 * B + A")
+	field(OUT, "$(P)$(A)elbow_move PP")
+}
+
+record(mbbo,  "$(P)$(A)grip_move") {
+  field(DESC, "grip motion")
+  field(DTYP, "Raw Soft Channel")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "CLOSE")
+  field(ONVL, "1")
+  field(TWST, "OPEN")
+  field(TWVL, "2")
+  field(FLNK, "$(P)$(A)send_cmd.PROC  PP MS")
+}
+
+record(mbbo,  "$(P)$(A)wrist_move") {
+  field(DESC, "wrist motion")
+  field(DTYP, "Raw Soft Channel")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "4")
+  field(TWST, "DOWN")
+  field(TWVL, "8")
+  field(FLNK, "$(P)$(A)send_cmd.PROC  PP MS")
+}
+
+record(mbbo,  "$(P)$(A)elbow_move") {
+  field(DESC, "elbow motion")
+  field(DTYP, "Raw Soft Channel")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "16")
+  field(TWST, "DOWN")
+  field(TWVL, "32")
+  field(FLNK, "$(P)$(A)send_cmd.PROC  PP MS")
+}
+
+record(mbbo,  "$(P)$(A)shoulder_move") {
+  field(DESC, "shoulder motion")
+  field(DTYP, "Raw Soft Channel")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "UP")
+  field(ONVL, "64")
+  field(TWST, "DOWN")
+  field(TWVL, "128")
+  field(FLNK, "$(P)$(A)send_cmd.PROC  PP MS")
+}
+
+record(mbbo,  "$(P)$(A)base_move") {
+  field(DESC, "base motion")
+  field(DTYP, "Raw Soft Channel")
+  field(ZRST, "STOP")
+  field(ZRVL, "0")
+  field(ONST, "ClockWise")
+  field(ONVL, "1")
+  field(TWST, "CounterClockWise")
+  field(TWVL, "2")
+  field(FLNK, "$(P)$(A)send_cmd.PROC  PP MS")
+}
+
+record(bo,    "$(P)$(A)led_onoff") {
+  field(DESC, "LED on/off")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  field(FLNK, "$(P)$(A)send_cmd.PROC  PP MS")
+}
+
+record(transform, "$(P)$(A)all_stop") {
+  field(DESC, "send the stop motion command")
+  field(CLCA, "0")
+  field(CLCB, "0")
+  field(CLCC, "0")
+  field(CLCD, "0")
+  field(CLCE, "0")
+  field(CLCF, "1")
+  field(OUTA, "$(P)$(A)grip_move.VAL       NPP NMS")
+  field(OUTB, "$(P)$(A)wrist_move.VAL      NPP NMS")
+  field(OUTC, "$(P)$(A)elbow_move.VAL      NPP NMS")
+  field(OUTD, "$(P)$(A)shoulder_move.VAL   NPP NMS")
+  field(OUTE, "$(P)$(A)base_move.VAL       NPP NMS")
+  field(OUTF, "$(P)$(A)send_cmd.PROC        PP  MS")
+}
+
+record(calc,  "$(P)$(A)send_cmd") {
+  field(DESC, "send the motion command")
+  field(INPA, "$(P)$(A)grip_move.RVAL      NPP NMS")
+  field(INPB, "$(P)$(A)wrist_move.RVAL     NPP NMS")
+  field(INPC, "$(P)$(A)elbow_move.RVAL     NPP NMS")
+  field(INPD, "$(P)$(A)shoulder_move.RVAL  NPP NMS")
+  field(CALC, "A+B+C+D")
+  field(FLNK, "$(P)$(A)send_cmd_2.PROC      PP  MS") 
+}
+
+record(scalcout, "$(P)$(A)send_cmd_2") {
+  field(DESC, "send the motion command")
+  field(INPA, "$(P)$(A)send_cmd.VAL        NPP NMS")
+  field(INPB, "$(P)$(A)base_move.RVAL      NPP NMS")
+  field(INPC, "$(P)$(A)led_onoff.VAL       NPP NMS")
+  field(CALC, "STR(A)+' '+STR(B)+' '+STR(C)")
+  field(OUT,  "$(P)$(A)send_cmd_str.VAL     PP  MS") 
+}
+
+record(stringout, "$(P)$(A)send_cmd_str") {
+  field(DESC, "send the motion command string")
+  field(DTYP, "asyn robo stringParm")
+  field(OUT, "@asyn($(OUTPORT))")
+}
+
