@@ -24,7 +24,7 @@ USB communications must be performed by root, so the IOC must run as root.
 
    .. rubric:: asyn configuration of USB communications in IOC's ``st.cmd`` file
    
-   .. code-block:: guess
+   .. code-block:: c
       :linenos:
 
       drvAsynUSBPortConfigure("USB1", "Robotic Arm", 0x1267, 0, 0, 0, 0, 1)
@@ -43,7 +43,7 @@ The USB communication is controlled by *asyn* through a single PV:
 
    .. rubric:: USB communication through *asyn*
    
-   .. code-block:: guess
+   .. code-block:: c
       :linenos:
 
       record(stringout, "$(P)$(A)send_cmd_str") {
@@ -58,7 +58,7 @@ The bit position of each motion axis is encoded in the database, such as:
 
    .. rubric:: bit command of each axis is encoded: elbow UP=16, DOWN=32, STOP=0
    
-   .. code-block:: guess
+   .. code-block:: c
       :linenos:
 
       record(mbbo,  "$(P)$(A)elbow_move") {
@@ -79,7 +79,7 @@ Commands for all axes are aggregated in these two records:
 
    .. rubric:: USB command assembled in two records
    
-   .. code-block:: guess
+   .. code-block:: c
       :linenos:
 
       record(calc,  "$(P)$(A)send_cmd") {
