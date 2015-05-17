@@ -26,6 +26,18 @@ https://vimeo.com/128020522
 Database, sequence, and GUI support are provided in this IOC project
 under the ``ip-2-13`` subdirectory.
 
+Schematic
+---------
+
+.. figure:: ../graphics/arm-IOC-LAN-OPI.png
+   :width: 8cm
+   
+   schematic of automated sequence equipment
+
+The sequence is run from a SNL program on the Raspberry Pi.
+The parameters for the sequence are entered from the
+EPICS OPI client ICSS BOY GUI on the laptop).
+
 -----------
 
 .. [#] 2012 ANL Energy Showcase: 
