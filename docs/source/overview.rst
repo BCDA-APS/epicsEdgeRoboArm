@@ -31,7 +31,7 @@ practical robotics implementation:
 * DC motor speed depends on power available from batteries
 
 An optional USB interface [#]_ is available, providing a Windows application
-to operate the robot.  The USB command protocol was deciphered and posted online
+to operate the robot.  The USB command protocol was deciphered [#]_ and posted online
 by a third party, enabling communication from a Linux computer.
 
 
@@ -81,7 +81,7 @@ second and so on for all five motors. This leaves bits 10-15 unused.
 
 In preparation for the 2012 Argonne National Laboratory Energy Showcase 
 (an open house for the community [#]_), 
-the BCDA group [#] created linux-based
+the BCDA group [#]_ created linux-based
 EPICS controls [#]_ for the robot arm 
 to simulate how robots install samples into X-ray detectors at 
 several of the APS experiment area beamlines. The robots allow for faster sample loading 

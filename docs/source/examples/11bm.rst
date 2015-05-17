@@ -16,8 +16,6 @@ are mounted on the instrument.
    https://vimeo.com/128020523
    https://vimeo.com/128020524
 
------------
-
 
 A movie of the APS 11-BM sample robot changing a sample is available online:
 https://www.youtube.com/watch?v=sowojskY7c4

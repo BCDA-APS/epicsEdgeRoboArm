@@ -5,3 +5,8 @@
    :maxdepth: 1
    
    contents
+
+-------------------
+
+:release: |release|
+:published: |today|
