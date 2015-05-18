@@ -1,17 +1,13 @@
 #!/usr/bin/env python
 
 import sys
-from time import sleep
-try:
-    from PyQt4 import QtCore, QtGui
-    pyqtSignal = QtCore.pyqtSignal
-except:
-    from PySide import QtCore, QtGui
-    pyqtSignal = QtCore.Signal
+from PyQt4 import QtCore, QtGui
+pyqtSignal = QtCore.pyqtSignal
 import robot
 
 
 class Axis(QtGui.QWidget):
+    '''GUI controls for motorized axes'''
 
     def __init__(self, parent = None):
         QtGui.QWidget.__init__(self, None)
@@ -57,6 +53,7 @@ class Axis(QtGui.QWidget):
 
 
 class Led(Axis):
+    '''GUI controls for the LED'''
 
     def __init__(self, parent = None):
         Axis.__init__(self, None)
@@ -90,6 +87,7 @@ class Led(Axis):
 
 
 class MainWindow(QtGui.QWidget):
+    '''main GUI'''
 
     # allow to move motors by keypresses (could move more than one motor at once!)
     movekeyPressed = pyqtSignal(QtCore.QEvent)
@@ -162,12 +160,15 @@ class MainWindow(QtGui.QWidget):
         self.setLayout(layout)
 
     def onLedKeyPressed(self, event):
+        '''turn on the LED'''
         robot.led_on()
 
     def onLedKeyReleased(self, event):
+        '''turn off the LED'''
         robot.led_off()
 
     def onMoveKeyPressed(self, event):
+        '''send a move command when key is pressed'''
         movement = robot.MOVE_DIRECTION[event.key() in self.positive_keys]
         axis = self.keydict[event.key()]
         if self.axis_states[axis] == robot.STOP_MOVE:
@@ -175,6 +176,7 @@ class MainWindow(QtGui.QWidget):
             self.axis_states[axis] = movement
 
     def onMoveKeyReleased(self, event):
+        '''send a STOP when key is released'''
         movement = robot.MOVE_DIRECTION[event.key() in self.positive_keys]
         axis = self.keydict[event.key()]
         if self.axis_states[axis] == movement:
@@ -207,6 +209,7 @@ class MainWindow(QtGui.QWidget):
 
 
 def main():
+    '''GUI starts here'''
     app = QtGui.QApplication(sys.argv)
     w = MainWindow()
     w.show()

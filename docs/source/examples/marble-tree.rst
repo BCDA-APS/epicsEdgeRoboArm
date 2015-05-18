@@ -10,7 +10,7 @@ A great example of the robot would be to place a ball
 in a maze, pick it up at the end and repeat.  With that 
 in mind, a marble tree (wooden musical instrument and 
 coffee table amusement) is ideal.  The marble tree shown 
-in the pictures was purchased in Berea, KY.
+in the pictures was purchased in Berea, KY. [#]_
 
 Example
 -------
@@ -26,34 +26,16 @@ the marble from the bin at the bottom.
    
    System for marble tree example
 
-Controls
-++++++++
+See the section :ref:`joystick` for details about the
+mapping of controls on the joystick.
 
-.. figure:: ../graphics/joystick-controls.png
-   :width: 12cm
-   
-   This is the joystick we will use.
-   It is right-handed and has a twist action (vertical axis).  
-   We'll use that for the base rotation.
-
-
-========  ================================================================
-button    action
-========  ================================================================
-trigger   close grip
-thumb     open grip
-twist     rotate base in same direction
-lever     turns on/off base rotation (useful when trying to grasp objects)
-joystick  shoulder axis: forward=down, back=up
-elbow     two buttons, forward and back
-wrist     knob, forward=down, back=up
-========  ================================================================
-
-The joystick buttons are described in file:
-``edgeRoboArmIOC/support/usb-1-0/usbApp/Db/LogitechExtreme3DPro.in``
-The actions are mapped to buttons in file:
-``edgeRoboArmIOC/support/xxx-5-6/xxxApp/Db/roboArm.db``
-
+Once the Raspberry Pi has been connected to the joystick and robot arm
+and the Linux system is started up, the EPICS IOC should start
+within two minutes.  (Otherwise something is wrong.  Check all the connections.)
+Keep in mind that the Raspberry Pi is very sensitive to changes in electrical
+power demand.  It is best to plug everything in **before** plugging in the electrical
+power to the Raspberry Pi.
+ 
 Pulse the LED button to ensure the IOC is operating.
 
 Step 1
@@ -68,8 +50,7 @@ Step 1
 .. figure:: ../graphics/SANY0005.JPG
    :width: 12cm
    
-   Move arm into place to pick up marble. 
-   Be sure to clear all the wooden leaves!
+   Address the ball. [#]_
 
 Step 2
 ++++++
@@ -124,8 +105,8 @@ Step 6
    Listen as the ball moves downward.
 
 
-
 -------------------
 
 .. [#] marble tree: http://www.berea.com/appalachian-fireside-gallery/
+.. [#] http://www.barryrhodes.com/2012/01/addressing-ball.html
 

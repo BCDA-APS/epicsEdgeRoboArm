@@ -6,7 +6,7 @@
 EPICS IOC
 =========
 
-The IOC must be run as root.  EPICS base 3.1412.1 (or higher) is required.
+The IOC must be run as root.  EPICS base 3.14.12.1 (or higher) is required.
 The support is provided by modifying synApps v5.6 [#]_, 
 removing modules that are not used, and adding support where appropriate.
 
@@ -186,14 +186,7 @@ From this keyboard binding interface, a true multitouch capability was added.
 Joystick support
 ----------------
 
-Keenan Lang, APS BCDA group, had developed an HMI module to allow human-machine
-interface devices such as mice, keyboards, and joysticks (and other) to
-communicate directly into an EPICS IOC.  In a few hours, he added that
-support to the robot IOC project so that a particular joystick can be used
-to control the robot arm directly within the IOC.
-
-With added joystick control in the IOC, it is not necessary to require a 
-KVM GUI (video screen + keyboard + mouse) to operate the robot.
+See the section :ref:`joystick` for more details.
 
 Now, the LED feature on the robot arm becomes useful!
 Verify the IOC is running by pulsing the LED with the programmed button on the joystick.

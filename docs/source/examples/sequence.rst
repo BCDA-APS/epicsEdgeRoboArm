@@ -9,7 +9,7 @@ Programmable Sequence
 
 In preparation for the 2012 Argonne National Laboratory Energy Showcase 
 (an open house for the community [#]_), 
-the BCDA group [#] created linux-based
+the BCDA group [#]_ created linux-based
 EPICS controls [#]_ for the robot arm 
 to simulate how robots install samples into X-ray detectors at 
 several of the APS experiment area beamlines. The robots allow for faster sample loading 

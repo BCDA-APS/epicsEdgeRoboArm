@@ -39,6 +39,7 @@ sleep = time.sleep
 
 
 def wait_PV_connection(retries = 25, short_pause_s = 0.1):
+    '''wait for all the PVs to connect with EPICS'''
     for _ in range(retries):
         if base.connected:
             return
@@ -48,14 +49,22 @@ def wait_PV_connection(retries = 25, short_pause_s = 0.1):
 
 
 def led_on():
+    '''turn the LED on'''
     led.put(LED_ON)
 
 
 def led_off():
+    '''turn the LED off'''
     led.put(LED_OFF)
 
 
 def move(axis, seconds):
+    '''
+    move the named axis for *seconds*
+    
+    :param str axis: motor name, requires name in AXES.keys()
+    :param str axis: move duration, positive when :math:`seconds>0`
+    '''
     way = MOVE_DIRECTION[seconds>=0]
     if abs(seconds) > 0:
         axis.put(way)
@@ -64,6 +73,7 @@ def move(axis, seconds):
 
 
 def exercise():
+    '''operate each axis of the robot arm'''
     print "Basic robot test"
     test_time_s = 0.5
     pause = 1.0
@@ -84,6 +94,7 @@ def exercise():
 
 
 def main():
+    '''command-line interface'''
     wait_PV_connection()
     exercise()
 
