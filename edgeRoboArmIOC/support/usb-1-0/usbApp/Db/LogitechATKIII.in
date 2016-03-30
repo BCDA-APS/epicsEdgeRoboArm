@@ -1,0 +1,21 @@
+#Logitech ATK III Joystick     Vendor: 0x046D    Product: 0xC214
+
+#Joystick
+HORIZONTAL_STATE [0] -> UInt8
+VERTICAL_STATE [1] -> UInt8
+
+#Toggle
+SWITCH_STATE [2] -> UInt8
+
+#Buttons
+TRIGGER_PRESSED  [3] -> Bool /0x01
+BUTTON2_PRESSED  [3] -> Bool /0x02
+BUTTON3_PRESSED  [3] -> Bool /0x04
+BUTTON4_PRESSED  [3] -> Bool /0x08
+BUTTON5_PRESSED  [3] -> Bool /0x10
+BUTTON6_PRESSED  [3] -> Bool /0x20
+BUTTON7_PRESSED  [3] -> Bool /0x40
+BUTTON8_PRESSED  [3] -> Bool /0x80
+BUTTON9_PRESSED  [4] -> Bool /0x01
+BUTTON10_PRESSED [4] -> Bool /0x02
+BUTTON11_PRESSED [4] -> Bool /0x04

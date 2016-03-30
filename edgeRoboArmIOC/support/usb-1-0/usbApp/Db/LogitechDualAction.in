@@ -1,0 +1,25 @@
+#Logitech Dual Action Controller     Vendor: 0x046D   Product: 0xC216
+
+#Joystick
+LSTICK_LR_STATE [0] -> UInt8
+LSTICK_UD_STATE [1] -> UInt8
+RSTICK_LR_STATE [2] -> UInt8
+RSTICK_UD_STATE [3] -> UInt8
+
+#DPAD
+DPAD_STATE [4] -> UInt8 /0x0F
+
+#Buttons
+BUTTON1_PRESSED [4] -> Bool /0x10
+BUTTON2_PRESSED [4] -> Bool /0x20
+BUTTON3_PRESSED [4] -> Bool /0x40
+BUTTON4_PRESSED [4] -> Bool /0x80
+
+BUTTON5_PRESSED  [5] -> Bool /0x01
+BUTTON6_PRESSED  [5] -> Bool /0x02
+BUTTON7_PRESSED  [5] -> Bool /0x04
+BUTTON8_PRESSED  [5] -> Bool /0x08
+BUTTON9_PRESSED  [5] -> Bool /0x10
+BUTTON10_PRESSED [5] -> Bool /0x20
+LSTICK_PRESSED   [5] -> Bool /0x40
+RSTICK_PRESSED   [5] -> Bool /0x80
