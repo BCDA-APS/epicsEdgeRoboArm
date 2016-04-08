@@ -40,6 +40,7 @@ class hidDriver : public asynPortDriver
 		
 		void printDebug(int level, std::string format, ...);
 		void setDebugLevel(int amt);
+		void setIOPrinting(int tf);
 		
 		asynStatus writeInt32(asynUser* pasynuser, epicsInt32 value);
 		asynStatus writeFloat64(asynUser* pasynuser, epicsFloat64 value);
@@ -75,18 +76,18 @@ class hidDriver : public asynPortDriver
 		std::string  SERIAL_NUM;
 		unsigned     INTERFACE;
 		
-		int TRANSFER_LENGTH_IN;
-		int ENDPOINT_ADDRESS_IN;
+		unsigned int TRANSFER_LENGTH_IN;
+		unsigned int ENDPOINT_ADDRESS_IN;
 		
-		int TRANSFER_LENGTH_OUT;
-		int ENDPOINT_ADDRESS_OUT;
+		unsigned int TRANSFER_LENGTH_OUT;
+		unsigned int ENDPOINT_ADDRESS_OUT;
 		
-		int DEBUG_LEVEL;
+		unsigned int DEBUG_LEVEL;
 		
 		DataLayout input_specification;
 		DataLayout output_specification;
 		
-		int    TIMEOUT;
+		unsigned int    TIMEOUT;
         double FREQUENCY;
 		double TIME_BETWEEN_CHECKS;
 		
@@ -101,6 +102,7 @@ class hidDriver : public asynPortDriver
 		epicsMutexId device_state;
 		
 		bool need_init;
+		bool print_transfer;
 };
 
 #endif

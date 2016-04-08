@@ -108,3 +108,10 @@ void hidDriver::setInterface(int interface_in)
 		this->claimInterface();
 	epicsMutexUnlock(this->device_state);
 }
+
+void hidDriver::setIOPrinting(int tf)
+{
+	this->printDebug(10, "Setting IO Printing: %d -> %d\n", this->print_transfer, tf);
+	
+	this->print_transfer = tf;
+}

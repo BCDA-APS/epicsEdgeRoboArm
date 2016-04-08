@@ -1,0 +1,6 @@
+record(ai, "$(P)$(R)_State")
+{
+	field(DTYP, "asynInt32")
+	field(SCAN, "I/O Intr")
+	field(INP, "@asyn($(PORT), 0, 0)$(PARAM)")
+}
