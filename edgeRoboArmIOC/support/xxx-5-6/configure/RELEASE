@@ -11,7 +11,7 @@
 #     - To remove modules from the build, delete or comment out the
 #       module name.
 
-SUPPORT=/usr/local/epics/edgeRoboArmIOC/support
+SUPPORT=/usr/local/epics/epicsEdgeRoboArm/edgeRoboArmIOC/support
 
 #https://svn.aps.anl.gov/epics/asyn/
 ASYN=$(SUPPORT)/asyn-4-20
@@ -26,5 +26,5 @@ SSCAN=$(SUPPORT)/sscan-2-7
 USB=$(SUPPORT)/usb-1-0
 XXX=$(SUPPORT)/xxx-5-6
 
-EPICS_BASE=/usr/local/epics/base
+EPICS_BASE=/usr/local/epics/base-3.14.12.5
 

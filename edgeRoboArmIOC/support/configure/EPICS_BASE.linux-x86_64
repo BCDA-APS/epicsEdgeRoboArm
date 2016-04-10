@@ -1,1 +1,1 @@
-EPICS_BASE=/usr/local/epics/base
+EPICS_BASE=/usr/local/epics/base-3.14.12.5
