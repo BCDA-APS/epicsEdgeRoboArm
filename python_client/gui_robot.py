@@ -21,9 +21,9 @@ class Axis(QtGui.QWidget):
         self.down = QtGui.QPushButton('down', self)
         self.up = QtGui.QPushButton('up', self)
         
-        self.layout.addWidget(self.label)
-        self.layout.addWidget(self.down)
-        self.layout.addWidget(self.up)
+        self.layout.addWidget(self.label, stretch=1)
+        self.layout.addWidget(self.down, stretch=1)
+        self.layout.addWidget(self.up, stretch=1)
         
         self.down.pressed.connect(self.onDown)
         self.up.pressed.connect(self.onUp)
@@ -59,7 +59,7 @@ class Led(Axis):
         Axis.__init__(self, None)
 
         self.pulse = QtGui.QPushButton('pulse (&p)')
-        self.layout.addWidget(self.pulse)
+        self.layout.addWidget(self.pulse, stretch=1)
         
         self.pulse.pressed.connect(self.onUp)
         self.pulse.released.connect(self.onRelease)
@@ -119,7 +119,7 @@ class MainWindow(QtGui.QWidget):
         layout = QtGui.QVBoxLayout()
         
         title = QtGui.QLabel('Robot Arm Controls')
-        layout.addWidget(title)
+        layout.addWidget(title, stretch=1)
 
         robot.wait_PV_connection()
 
@@ -128,11 +128,11 @@ class MainWindow(QtGui.QWidget):
             w = Axis()
             w.setAxis(robot.AXES[axis])
             w.setLabel(axis)
-            layout.addWidget(w)
+            layout.addWidget(w, stretch=1)
             widgets[axis] = w
         led = Led()
         led.setAxis(robot.led)
-        layout.addWidget(led)
+        layout.addWidget(led, stretch=1)
 
         # relabel the buttons
         axis_button_labels = { # values = (down_button_text, up_button_text)
@@ -172,7 +172,7 @@ class MainWindow(QtGui.QWidget):
         movement = robot.MOVE_DIRECTION[event.key() in self.positive_keys]
         axis = self.keydict[event.key()]
         if self.axis_states[axis] == robot.STOP_MOVE:
-            robot.AXES[axis].put(movement)
+            robot.AXES[axis]/usr/lib/x86_64-linux-gnu/libreadline.a.put(movement)
             self.axis_states[axis] = movement
 
     def onMoveKeyReleased(self, event):
