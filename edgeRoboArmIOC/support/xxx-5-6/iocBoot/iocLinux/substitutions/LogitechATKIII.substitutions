@@ -1,0 +1,40 @@
+file "$(USB)/usbApp/Db/AnalogAxis.template"
+{
+pattern
+{P     R               PARAM               PORT          FLNK}
+{xxx:  A1:Vertical     VERTICAL_STATE      LOGITECH      xxx:A1:shoulder}
+{xxx:  A1:Switch       SWITCH_STATE        LOGITECH      xxx:A1:move_lock} 
+}
+
+file "$(USB)/usbApp/Db/DigitalButton.template"
+{
+pattern
+{P     R               PARAM               PORT          FLNK}
+{xxx:  A1:Trigger      TRIGGER_PRESSED     LOGITECH      xxx:A1:led}
+{xxx:  A1:Button2      BUTTON2_PRESSED     LOGITECH      xxx:A1:wrist}
+{xxx:  A1:Button3      BUTTON3_PRESSED     LOGITECH      xxx:A1:wrist}
+{xxx:  A1:Button4      BUTTON4_PRESSED     LOGITECH      xxx:A1:grip}
+{xxx:  A1:Button5      BUTTON5_PRESSED     LOGITECH      xxx:A1:grip}
+{xxx:  A1:Button6      BUTTON6_PRESSED     LOGITECH      xxx:A1:elbow}
+{xxx:  A1:Button7      BUTTON7_PRESSED     LOGITECH      xxx:A1:elbow}
+{xxx:  A1:Button8      BUTTON8_PRESSED     LOGITECH      xxx:A1:base}
+{xxx:  A1:Button9      BUTTON9_PRESSED     LOGITECH      xxx:A1:base}
+}
+
+file "$(TOP)/iocBoot/$(IOC)/substitutions/AxisMove.template"
+{
+pattern
+{P     R               LOCK               AXIS             DEAD_LOW   DEAD_HIGH   OUT}
+{xxx:  A1:move_lock    0                  xxx:A1:Switch    0          126         ""}        
+{xxx:  A1:shoulder     xxx:A1:move_lock   xxx:A1:Vertical  100        150         xxx:A1:shoulder_move}
+}
+
+field "$(TOP)/iocBoot/$(IOC)/substitutions/ButtonMove.template"
+{
+pattern
+{P     R                LOCK              BUTTONA            BUTTONB           OUT}
+{xxx:  A1:led           0                 0                  xxx:A1:Trigger    xxx:A1:led_onoff}
+{xxx:  A1:grip          xxx:A1:move_lock  xxx:A1:Button4     xxx:A1:Button5    xxx:A1:grip_move}
+{xxx:  A1:elbow         xxx:A1:move_lock  xxx:A1:Button6     xxx:A1:Button7    xxx:A1:elbow_move}
+{xxx:  A1:base          xxx:A1:move_lock  xxx:A1:Button8     xxx:A1:Button9    xxx:A1:base_move}
+}

@@ -1,0 +1,7 @@
+record(calcout, "$(P)$(R)")
+{
+	field(INPA, "$(LOCK) NPP")
+	field(INPB, "$(AXIS) NPP")
+	field(CALC, "A ? 0 : (B = $(VALB)) + 2 * (B = $(VALA))")
+	field(OUT, "$(OUT) PP")
+}

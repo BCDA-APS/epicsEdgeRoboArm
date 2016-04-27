@@ -1,0 +1,8 @@
+record(calcout, "$(P)$(R)")
+{
+	field(INPA, "$(LOCK) NPP")
+	field(INPB, "$(BUTTONA) NPP")
+	field(INPC, "$(BUTTONB) NPP")
+	field(CALC, "A ? 0 : 2 * B + C")
+	field(OUT, "$(OUT) PP")
+}
