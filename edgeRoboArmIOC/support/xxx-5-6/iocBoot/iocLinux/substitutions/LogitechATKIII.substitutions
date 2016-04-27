@@ -29,7 +29,7 @@ pattern
 {xxx:  A1:shoulder     xxx:A1:move_lock   xxx:A1:Vertical  100        150         xxx:A1:shoulder_move}
 }
 
-field "$(TOP)/iocBoot/$(IOC)/substitutions/ButtonMove.template"
+file "$(TOP)/iocBoot/$(IOC)/substitutions/ButtonMove.template"
 {
 pattern
 {P     R                LOCK              BUTTONA            BUTTONB           OUT}
