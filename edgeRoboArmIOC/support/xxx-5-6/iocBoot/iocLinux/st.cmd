@@ -18,10 +18,19 @@ iocxxxLinux_registerRecordDeviceDriver(pdbbase)
 drvAsynUSBPortConfigure("USB1", "Robotic Arm", 0x1267, 0, 0, 0, 0, 1)
 asynOctetConnect("USB1", "USB1")
 
-usbCreateDriver("JOYSTICK", "$(USB)/usbApp/Db/LogitechExtreme3DPro.in")
-usbConnectDevice("JOYSTICK", 0, 0x046D, 0xC215)
+#usbCreateDriver("LOGITECH", "$(USB)/usbApp/Db/LogitechATKIII.in")
+#usbConnectDevice("LOGITECH", 0, 0x046D, 0xC214)
+#dbLoadTemplate("./substitutions/LogitechATKIII.substitutions")
 
-dbLoadRecords("../../xxxApp/Db/roboArm.db", "P=xxx:, A=A1:, INPORT=JOYSTICK, OUTPORT=USB1")
+usbCreateDriver("LOGITECH", "$(USB)/usbApp/Db/LogitechExtreme3DPro.in")
+usbConnectDevice("LOGITECH", 0, 0x046D, 0xC215)
+dbLoadTemplate("./substitutions/LogitechExtreme3DPro.substitutions")
+
+#usbCreateDriver("LOGITECH", "$(USB)/usbApp/Db/LogitechDualAction.in")
+#usbConnectDevice("LOGITECH", 0, 0x046D, 0xC216)
+#dbLoadTemplate("./substitutions/LogitechDualAction.substitutions")
+
+dbLoadRecords("../../xxxApp/Db/roboArm.db", "P=xxx:, A=A1:, OUTPORT=USB1")
 ###############################################################################
 ###############################################################################
 ###############################################################################
