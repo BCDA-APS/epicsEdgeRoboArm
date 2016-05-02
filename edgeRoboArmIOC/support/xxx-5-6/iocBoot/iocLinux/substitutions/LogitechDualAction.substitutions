@@ -24,6 +24,7 @@ file "$(TOP)/iocBoot/$(IOC)/substitutions/AxisMove.template"
 {
 pattern
 {P     R               LOCK               AXIS             DEAD_LOW   DEAD_HIGH   OUT}
+{xxx:  A1:move_lock    0                  xxx:A1:Button2   1          1           ""}  
 {xxx:  A1:base         xxx:A1:move_lock   xxx:A1:Rotation  100        150         xxx:A1:base_move}
 {xxx:  A1:shoulder     xxx:A1:move_lock   xxx:A1:Vertical  100        150         xxx:A1:shoulder_move}
 }
@@ -32,8 +33,7 @@ file "$(TOP)/iocBoot/$(IOC)/substitutions/ButtonMove.template"
 {
 pattern
 {P     R                LOCK              BUTTONA            BUTTONB           OUT}
-{xxx:  A1:led           0                 0                  xxx:A1:Button1    xxx:A1:led_onoff}
-{xxx:  A1:move_lock     0                 0                  xxx:A1:Button2    ""}        
+{xxx:  A1:led           0                 0                  xxx:A1:Button1    xxx:A1:led_onoff}      
 {xxx:  A1:elbow         xxx:A1:move_lock  xxx:A1:Button7     xxx:A1:Button5    xxx:A1:elbow_move}
 {xxx:  A1:grip          0                 xxx:A1:Button3     xxx:A1:Button4    xxx:A1:grip_move}
 {xxx:  A1:wrist         xxx:A1:move_lock  xxx:A1:Button8     xxx:A1:Button6    xxx:A1:wrist_move}
