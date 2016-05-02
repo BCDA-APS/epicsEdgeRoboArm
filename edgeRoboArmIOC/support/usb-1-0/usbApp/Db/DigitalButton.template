@@ -1,4 +1,4 @@
-record(bi, "$(P)$(R)_Pressed")
+record(bi, "$(P)$(R)")
 {
 	field(DTYP, "asynInt32")
 	field(SCAN, "I/O Intr")

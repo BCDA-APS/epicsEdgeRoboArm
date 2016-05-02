@@ -1,4 +1,4 @@
-record(ai, "$(P)$(R)_State")
+record(ai, "$(P)$(R)")
 {
 	field(DTYP, "asynInt32")
 	field(SCAN, "I/O Intr")
