@@ -34,7 +34,7 @@ pattern
 {P     R                LOCK              BUTTONA            BUTTONB           OUT}
 {xxx:  A1:led           0                 0                  xxx:A1:Button11   xxx:A1:led_onoff}
 {xxx:  A1:elbow         xxx:A1:move_lock  xxx:A1:Button3     xxx:A1:Button5    xxx:A1:elbow_move}
-{xxx:  A1:grip          xxx:A1:move_lock  xxx:A1:Trigger     xxx:A1:LButton    xxx:A1:grip_move}
+{xxx:  A1:grip          xxx:A1:move_lock  xxx:A1:LButton     xxx:A1:Trigger    xxx:A1:grip_move}
 }
 
 file "$(TOP)/iocBoot/$(IOC)/substitutions/DiscreteMove.template"
