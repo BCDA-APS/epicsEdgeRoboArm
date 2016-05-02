@@ -37,4 +37,5 @@ pattern
 {xxx:  A1:grip          xxx:A1:move_lock  xxx:A1:Button4     xxx:A1:Button5    xxx:A1:grip_move}
 {xxx:  A1:elbow         xxx:A1:move_lock  xxx:A1:Button6     xxx:A1:Button7    xxx:A1:elbow_move}
 {xxx:  A1:base          xxx:A1:move_lock  xxx:A1:Button8     xxx:A1:Button9    xxx:A1:base_move}
+{xxx:  A1:wrist         xxx:A1:move_lock  xxx:A1:Button2     xxx:A1:Button3    xxx:A1:wrist_move}
 }
