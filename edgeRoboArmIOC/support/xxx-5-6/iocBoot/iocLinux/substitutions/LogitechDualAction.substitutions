@@ -2,22 +2,22 @@ file "$(USB)/usbApp/Db/AnalogAxis.template"
 {
 pattern
 {P     R               PARAM               PORT          FLNK}
-{xxx:  DUAL:Vertical     LSTICK_UD_STATE     LOGITECH      xxx:DUAL:shoulder}
-{xxx:  DUAL:Rotation     LSTICK_LR_STATE     LOGITECH      xxx:DUAL:base}
+{xxx:  DUAL:Vertical     LSTICK_UD_STATE     LOGITECH_DUAL      xxx:DUAL:shoulder}
+{xxx:  DUAL:Rotation     LSTICK_LR_STATE     LOGITECH_DUAL      xxx:DUAL:base}
 }
 
 file "$(USB)/usbApp/Db/DigitalButton.template"
 {
 pattern
 {P     R               PARAM               PORT          FLNK}
-{xxx:  DUAL:Button1      BUTTON1_PRESSED     LOGITECH      xxx:DUAL:led}
-{xxx:  DUAL:Button2      BUTTON2_PRESSED     LOGITECH      xxx:DUAL:move_lock}
-{xxx:  DUAL:Button3      BUTTON3_PRESSED     LOGITECH      xxx:DUAL:grip}
-{xxx:  DUAL:Button4      BUTTON4_PRESSED     LOGITECH      xxx:DUAL:grip}
-{xxx:  DUAL:Button5      BUTTON5_PRESSED     LOGITECH      xxx:DUAL:elbow}
-{xxx:  DUAL:Button7      BUTTON7_PRESSED     LOGITECH      xxx:DUAL:elbow}
-{xxx:  DUAL:Button6      BUTTON6_PRESSED     LOGITECH      xxx:DUAL:wrist}
-{xxx:  DUAL:Button8      BUTTON8_PRESSED     LOGITECH      xxx:DUAL:wrist}
+{xxx:  DUAL:Button1      BUTTON1_PRESSED     LOGITECH_DUAL      xxx:DUAL:led}
+{xxx:  DUAL:Button2      BUTTON2_PRESSED     LOGITECH_DUAL      xxx:DUAL:move_lock}
+{xxx:  DUAL:Button3      BUTTON3_PRESSED     LOGITECH_DUAL      xxx:DUAL:grip}
+{xxx:  DUAL:Button4      BUTTON4_PRESSED     LOGITECH_DUAL      xxx:DUAL:grip}
+{xxx:  DUAL:Button5      BUTTON5_PRESSED     LOGITECH_DUAL      xxx:DUAL:elbow}
+{xxx:  DUAL:Button7      BUTTON7_PRESSED     LOGITECH_DUAL      xxx:DUAL:elbow}
+{xxx:  DUAL:Button6      BUTTON6_PRESSED     LOGITECH_DUAL      xxx:DUAL:wrist}
+{xxx:  DUAL:Button8      BUTTON8_PRESSED     LOGITECH_DUAL      xxx:DUAL:wrist}
 }
 
 file "$(TOP)/iocBoot/$(IOC)/substitutions/AxisMove.template"
