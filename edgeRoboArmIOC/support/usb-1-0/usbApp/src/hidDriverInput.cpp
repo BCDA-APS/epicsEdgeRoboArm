@@ -94,6 +94,16 @@ void hidDriver::update_thread()
 
 void hidDriver::updateParams()
 {	
+	if (this->print_transfer)
+	{
+		for (unsigned index = 0; index < this->TRANSFER_LENGTH_IN; index += 1)
+		{
+			printf("%02X ", this->state[index]);
+		}
+		
+		printf("\n");
+	}
+
 	/*
 	 * Iterate through the asyn params and assign them to their 
 	 * registers.

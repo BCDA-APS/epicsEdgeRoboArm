@@ -278,8 +278,10 @@ void  hidDriver::findDevice()
 		
 		if (this->isMatch(dev) and not contains(dev))
 		{
-			claimed.push_back(dev);
-			libusb_open(dev, &DEVICE);
+			int stat = libusb_open(dev, &DEVICE);
+			
+			if (! stat)    { claimed.push_back(dev); }
+			
 			break;
 		}
 	}

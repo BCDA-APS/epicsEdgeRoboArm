@@ -249,6 +249,27 @@ bool checkInterfaceArgs(const iocshArgBuf* args)
 	return true;
 }
 
+bool checkTransArgs(const iocshArgBuf* args)
+{
+	if (args[0].sval == NULL)
+	{
+		printf("Error: no input given.\n");
+		return false;
+	}
+	else if (not port_used(args[0].sval))
+	{ 
+		printf("Error: couldn't find port specified.\n");
+		return false;
+	}
+	else if (args[1].ival < 0)
+	{
+		printf("Error: input cannot be negative.\n");
+		return false;
+	}
+	
+	return true;
+}
+
 
 static void parse(const char* filename, DataLayout& spec)
 {
@@ -336,6 +357,10 @@ void usbSetFrequency( const char* port_name, double frequency)
 	get_driver(port_name)->setFrequency(timing);
 }
 
+void usbShowIO(const char* port_name, int tf)
+{
+	get_driver(port_name)->setIOPrinting(tf);
+}
 
 
 extern "C"
@@ -365,6 +390,9 @@ extern "C"
 	static const iocshArg inter_arg0  = {"portName",       iocshArgString};
 	static const iocshArg inter_arg1  = {"interfaceNum",   iocshArgInt};
 	
+	static const iocshArg trans_arg0  = {"portName",       iocshArgString};
+	static const iocshArg trans_arg1  = {"print_io_data",  iocshArgInt};
+	
 	
 	
 	static const iocshArg* cx_args[]     = {&cx_arg0, &cx_arg1, &cx_arg2, &cx_arg3, &cx_arg4};
@@ -374,6 +402,7 @@ extern "C"
 	static const iocshArg* delay_args[]  = {&delay_arg0, &delay_arg1};
 	static const iocshArg* debug_args[]  = {&debug_arg0, &debug_arg1};
 	static const iocshArg* inter_args[]  = {&inter_arg0, &inter_arg1};
+	static const iocshArg* trans_args[]  = {&trans_arg0, &trans_arg1};
 	
 
 
@@ -384,6 +413,7 @@ extern "C"
 	static const iocshFuncDef delay_func  = {"usbSetDelay", 2, delay_args};
 	static const iocshFuncDef debug_func  = {"usbSetDebugLevel", 2, debug_args};
 	static const iocshFuncDef inter_func  = {"usbSetInterface", 2, inter_args};
+	static const iocshFuncDef trans_func  = {"usbShowIO", 2, trans_args};
 	
 	
 
@@ -444,7 +474,14 @@ extern "C"
 		}
 	}
 	
-
+	static void call_trans_func(const iocshArgBuf* args)
+	{
+		if (checkTransArgs(args))
+		{
+			usbShowIO(args[0].sval, args[0].ival);
+		}
+	}
+	
 
 	static void usbConnectRegistrar(void)       { iocshRegister(&cx_func, call_cx_func); }
 	static void usbDriverRegistrar(void)        { iocshRegister(&driver_func, call_driver_func); }
@@ -453,6 +490,7 @@ extern "C"
 	static void usbDelayRegistrar(void)         { iocshRegister(&delay_func, call_delay_func); }
 	static void usbDebugRegistrar(void)         { iocshRegister(&debug_func, call_debug_func); }
 	static void usbInterRegistrar(void)         { iocshRegister(&inter_func, call_inter_func); }
+	static void usbTransRegistrar(void)         { iocshRegister(&trans_func, call_trans_func); }
 	
 	
 
@@ -463,4 +501,5 @@ extern "C"
 	epicsExportRegistrar(usbDelayRegistrar);
 	epicsExportRegistrar(usbDebugRegistrar);
 	epicsExportRegistrar(usbInterRegistrar);
+	epicsExportRegistrar(usbTransRegistrar);
 }
