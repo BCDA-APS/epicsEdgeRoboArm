@@ -2,21 +2,21 @@ file "$(USB)/usbApp/Db/AnalogAxis.template"
 {
 pattern
 {P     R               PARAM               PORT          FLNK}
-{xxx:  PRO:Vertical     VERTICAL_STATE      LOGITECH      xxx:PRO:shoulder}
-{xxx:  PRO:Rotation     ROTATION_STATE      LOGITECH      xxx:PRO:base}
-{xxx:  PRO:Switch       SWITCH_STATE        LOGITECH      xxx:PRO:move_lock} 
-{xxx:  PRO:Hat          HAT_STATE           LOGITECH      xxx:PRO:wrist}
+{xxx:  PRO:Vertical     VERTICAL_STATE      LOGITECH_PRO      xxx:PRO:shoulder}
+{xxx:  PRO:Rotation     ROTATION_STATE      LOGITECH_PRO      xxx:PRO:base}
+{xxx:  PRO:Switch       SWITCH_STATE        LOGITECH_PRO      xxx:PRO:move_lock} 
+{xxx:  PRO:Hat          HAT_STATE           LOGITECH_PRO      xxx:PRO:wrist}
 }
 
 file "$(USB)/usbApp/Db/DigitalButton.template"
 {
 pattern
 {P     R               PARAM               PORT          FLNK}
-{xxx:  PRO:Trigger      TRIGGER_PRESSED     LOGITECH      xxx:PRO:grip}
-{xxx:  PRO:LButton      LBUTTON_PRESSED     LOGITECH      xxx:PRO:grip}
-{xxx:  PRO:Button3      BUTTON3_PRESSED     LOGITECH      xxx:PRO:elbow}
-{xxx:  PRO:Button5      BUTTON5_PRESSED     LOGITECH      xxx:PRO:elbow}
-{xxx:  PRO:Button11     BUTTON11_PRESSED    LOGITECH      xxx:PRO:led}
+{xxx:  PRO:Trigger      TRIGGER_PRESSED     LOGITECH_PRO      xxx:PRO:grip}
+{xxx:  PRO:LButton      LBUTTON_PRESSED     LOGITECH_PRO      xxx:PRO:grip}
+{xxx:  PRO:Button3      BUTTON3_PRESSED     LOGITECH_PRO      xxx:PRO:elbow}
+{xxx:  PRO:Button5      BUTTON5_PRESSED     LOGITECH_PRO      xxx:PRO:elbow}
+{xxx:  PRO:Button11     BUTTON11_PRESSED    LOGITECH_PRO      xxx:PRO:led}
 }
 
 file "$(TOP)/iocBoot/$(IOC)/substitutions/AxisMove.template"
