@@ -2,44 +2,44 @@ file "$(USB)/usbApp/Db/AnalogAxis.template"
 {
 pattern
 {P     R               PARAM               PORT          FLNK}
-{xxx:  A1:Vertical     VERTICAL_STATE      LOGITECH      xxx:A1:shoulder}
-{xxx:  A1:Rotation     ROTATION_STATE      LOGITECH      xxx:A1:base}
-{xxx:  A1:Switch       SWITCH_STATE        LOGITECH      xxx:A1:move_lock} 
-{xxx:  A1:Hat          HAT_STATE           LOGITECH      xxx:A1:wrist}
+{xxx:  PRO:Vertical     VERTICAL_STATE      LOGITECH_PRO      xxx:PRO:shoulder}
+{xxx:  PRO:Rotation     ROTATION_STATE      LOGITECH_PRO      xxx:PRO:base}
+{xxx:  PRO:Switch       SWITCH_STATE        LOGITECH_PRO      xxx:PRO:move_lock} 
+{xxx:  PRO:Hat          HAT_STATE           LOGITECH_PRO      xxx:PRO:wrist}
 }
 
 file "$(USB)/usbApp/Db/DigitalButton.template"
 {
 pattern
 {P     R               PARAM               PORT          FLNK}
-{xxx:  A1:Trigger      TRIGGER_PRESSED     LOGITECH      xxx:A1:grip}
-{xxx:  A1:LButton      LBUTTON_PRESSED     LOGITECH      xxx:A1:grip}
-{xxx:  A1:Button3      BUTTON3_PRESSED     LOGITECH      xxx:A1:elbow}
-{xxx:  A1:Button5      BUTTON5_PRESSED     LOGITECH      xxx:A1:elbow}
-{xxx:  A1:Button11     BUTTON11_PRESSED    LOGITECH      xxx:A1:led}
+{xxx:  PRO:Trigger      TRIGGER_PRESSED     LOGITECH_PRO      xxx:PRO:grip}
+{xxx:  PRO:LButton      LBUTTON_PRESSED     LOGITECH_PRO      xxx:PRO:grip}
+{xxx:  PRO:Button3      BUTTON3_PRESSED     LOGITECH_PRO      xxx:PRO:elbow}
+{xxx:  PRO:Button5      BUTTON5_PRESSED     LOGITECH_PRO      xxx:PRO:elbow}
+{xxx:  PRO:Button11     BUTTON11_PRESSED    LOGITECH_PRO      xxx:PRO:led}
 }
 
 file "$(TOP)/iocBoot/$(IOC)/substitutions/AxisMove.template"
 {
 pattern
 {P     R               LOCK               AXIS             DEAD_LOW   DEAD_HIGH   OUT}
-{xxx:  A1:move_lock    0                  xxx:A1:Switch    0          126         ""}        
-{xxx:  A1:base         xxx:A1:move_lock   xxx:A1:Rotation  50         200         xxx:A1:base_move}
-{xxx:  A1:shoulder     xxx:A1:move_lock   xxx:A1:Vertical  50         600         xxx:A1:shoulder_move}
+{xxx:  PRO:move_lock    0                  xxx:PRO:Switch    0          126         ""}        
+{xxx:  PRO:base         xxx:PRO:move_lock   xxx:PRO:Rotation  50         200         xxx:A1:base_move}
+{xxx:  PRO:shoulder     xxx:PRO:move_lock   xxx:PRO:Vertical  50         600         xxx:A1:shoulder_move}
 }
 
 file "$(TOP)/iocBoot/$(IOC)/substitutions/ButtonMove.template"
 {
 pattern
 {P     R                LOCK              BUTTONA            BUTTONB           OUT}
-{xxx:  A1:led           0                 0                  xxx:A1:Button11   xxx:A1:led_onoff}
-{xxx:  A1:elbow         xxx:A1:move_lock  xxx:A1:Button3     xxx:A1:Button5    xxx:A1:elbow_move}
-{xxx:  A1:grip          xxx:A1:move_lock  xxx:A1:LButton     xxx:A1:Trigger    xxx:A1:grip_move}
+{xxx:  PRO:led           0                 0                  xxx:PRO:Button11   xxx:A1:led_onoff}
+{xxx:  PRO:elbow         xxx:PRO:move_lock  xxx:PRO:Button3     xxx:PRO:Button5    xxx:A1:elbow_move}
+{xxx:  PRO:grip          xxx:PRO:move_lock  xxx:PRO:LButton     xxx:PRO:Trigger    xxx:A1:grip_move}
 }
 
 file "$(TOP)/iocBoot/$(IOC)/substitutions/DiscreteMove.template"
 {
 pattern
 {P     R                LOCK               AXIS            VALA    VALB     OUT}
-{xxx:  A1:wrist         xxx:A1:move_lock   xxx:A1:Hat      4       0        xxx:A1:wrist_move}
+{xxx:  PRO:wrist         xxx:PRO:move_lock   xxx:PRO:Hat      4       0        xxx:A1:wrist_move}
 }
