@@ -45,3 +45,6 @@ dbl > dbl-all.txt
 
 ### Start up the autosave task and tell it what to do.
 create_monitor_set("auto_settings.req",30,"P=$(PREFIX)")
+
+# turn on the LED to signal IOC has booted
+dbpf("xxx:A1:led_onoff", 1)
