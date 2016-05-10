@@ -158,6 +158,7 @@ class MainWindow(QtGui.QWidget):
             self.axis_states[item] = robot.AXES[item].get()
         
         self.setLayout(layout)
+        self.setWindowState(QtCore.Qt.WindowMaximized)
 
     def onLedKeyPressed(self, event):
         '''turn on the LED'''
