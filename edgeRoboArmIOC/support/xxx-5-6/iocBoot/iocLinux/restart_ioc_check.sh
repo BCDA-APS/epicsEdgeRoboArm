@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # restart_ioc_check.sh
+# must run as root to use USB support
 
 # run by  crontab -e
 #     * * * * *  /root/restart_ioc_check.sh 2>&1 /dev/null
@@ -14,6 +15,14 @@
 #
 #  # auto-start the robotic arm IOC
 #  * * * * *  /root/restart_ioc_check.sh 2>&1 /dev/null
+#
+#------------
+#
+# also, as root (do these steps BEFORE enabling the cron job):
+#  cd /root
+#  ln -s /usr/local/epics/epicsEdgeRoboArm/edgeRoboArmIOC/support/xxx-5-6/iocBoot/iocLinux ./ioc
+#  ln -s ioc/restart_ioc_check.sh ./
+#  ln -s ioc/is_ioc_up.py ./
  
 
 export EPICS_HOST_ARCH=linux-arm
@@ -29,7 +38,7 @@ if [ "${usb_connect}" != "" ]; then
     #/usr/local/epics/base/bin/linux-arm/caRepeater &
     /usr/local/epics/base/bin/${EPICS_HOST_ARCH}/caRepeater &
 
-    cd /usr/local/epics/synAppsRobo/support/xxx-5-6/iocBoot/iocLinux/
+    cd  /usr/local/epics/epicsEdgeRoboArm/edgeRoboArmIOC/support/xxx-5-6/iocBoot/iocLinux
     ./in-screen.sh
   fi
 fi
