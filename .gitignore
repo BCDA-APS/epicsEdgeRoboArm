@@ -2,3 +2,6 @@ O.*
 *.pyc
 *~
 /docs/build
+bin
+lib
+*.sav_*
