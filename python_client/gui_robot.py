@@ -99,8 +99,8 @@ class MainWindow(QtGui.QWidget):
     
     # these are the keys that trigger the events
     keydict = {
-        QtCore.Qt.Key_1: robot.AXIS_NAMES[0],   # move base +
-        QtCore.Qt.Key_B: robot.AXIS_NAMES[0],   # move base -
+        QtCore.Qt.Key_L: robot.AXIS_NAMES[0],   # move base +
+        QtCore.Qt.Key_R: robot.AXIS_NAMES[0],   # move base -
         QtCore.Qt.Key_2: robot.AXIS_NAMES[1],   # move shoulder + 
         QtCore.Qt.Key_S: robot.AXIS_NAMES[1],   # move shoulder -
         QtCore.Qt.Key_3: robot.AXIS_NAMES[2],   # move elbow +
@@ -110,7 +110,7 @@ class MainWindow(QtGui.QWidget):
         QtCore.Qt.Key_5: robot.AXIS_NAMES[4],   # move grip +
         QtCore.Qt.Key_G: robot.AXIS_NAMES[4],   # move grip -
     }
-    positive_keys = (QtCore.Qt.Key_1, QtCore.Qt.Key_2, QtCore.Qt.Key_3, 
+    positive_keys = (QtCore.Qt.Key_L, QtCore.Qt.Key_2, QtCore.Qt.Key_3, 
                      QtCore.Qt.Key_4, QtCore.Qt.Key_5)
 
     def __init__(self):
@@ -172,7 +172,7 @@ class MainWindow(QtGui.QWidget):
         movement = robot.MOVE_DIRECTION[event.key() in self.positive_keys]
         axis = self.keydict[event.key()]
         if self.axis_states[axis] == robot.STOP_MOVE:
-            robot.AXES[axis]/usr/lib/x86_64-linux-gnu/libreadline.a.put(movement)
+            robot.AXES[axis].put(movement)
             self.axis_states[axis] = movement
 
     def onMoveKeyReleased(self, event):
