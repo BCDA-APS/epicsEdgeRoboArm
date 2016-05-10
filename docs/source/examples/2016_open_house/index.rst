@@ -157,8 +157,10 @@ to the EPICS database actions.
 The IOC is prepared for the joystick to be hot-swapped 
 (unplugged, changed to a different one, ....
 
-note: It is not certain what happens if more than one joystick is plugged in.
-Nothing bad. But, which one gets controls?
+If you plug in a second recognized joystick, it will also work.
+If it is the same type as an existing plugged-in joystick, the 
+second will be ignored unless you create additional EPICS support.
+But, who will do that?
 
 .. toctree::
    :maxdepth: 1
