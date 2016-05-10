@@ -136,7 +136,7 @@ class MainWindow(QtGui.QWidget):
 
         # relabel the buttons
         axis_button_labels = { # values = (down_button_text, up_button_text)
-            robot.BASE_NAME_INDEX: ('right (&b)', 'left (&1)'),
+            robot.BASE_NAME_INDEX: ('right (&r)', 'left (&l)'),
             robot.SHOULDER_NAME_INDEX: ('down (&s)', 'up (&2)'),
             robot.ELBOW_NAME_INDEX: ('down (&e)', 'up (&3)'),
             robot.WRIST_NAME_INDEX: ('down (&w)', 'up (&4)'),
@@ -219,3 +219,15 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+# run by  crontab -e
+#              field          allowed values
+#              -----          --------------
+#              minute         0-59
+#              hour           0-23
+#              day of month   1-31
+#              month          1-12 (or names, see below)
+#	       day of week    0-7 (0 or 7 is Sun, or use names)
+#
+#  # auto-start the robotic arm GUI
+#  * * * * *  /home/pi/restart_gui_check.sh 2>&1 /dev/null

@@ -20,12 +20,17 @@
 #
 # also, as root (do these steps BEFORE enabling the cron job):
 #  cd /root
-#  ln -s /usr/local/epics/epicsEdgeRoboArm/edgeRoboArmIOC/support/xxx-5-6/iocBoot/iocLinux ./ioc
+#  ln -s ${ST_CMD_DIR} ./ioc
 #  ln -s ioc/restart_ioc_check.sh ./
 #  ln -s ioc/is_ioc_up.py ./
  
 
-export EPICS_HOST_ARCH=linux-arm
+export EPICS_HOST_ARCH=`/usr/local/epics/base/startup/EpicsHostArch`
+export EPICS_BASE_BIN=/usr/local/epics/base/bin/${EPICS_HOST_ARCH}
+export ROBOT_DIR=/usr/local/epics/epicsEdgeRoboArm
+export IOC_TOP=${ROBOT_DIR}/edgeRoboArmIOC/support/xxx-5-6
+export ST_CMD_DIR=${IOC_TOP}/iocBoot/iocLinux
+
 
 # ID 1267:0000 Logic3 / SpectraVideo plc
 export usb_connect=`lsusb | grep  "ID 1267:0000 Logic3 / SpectraVideo plc"`
@@ -35,10 +40,9 @@ if [ "${usb_connect}" != "" ]; then
   export ioc_off=`/root/is_ioc_up.py`
   if [ "${ioc_off}" != "" ]; then
     #echo "IOC is not running"
-    #/usr/local/epics/base/bin/linux-arm/caRepeater &
-    /usr/local/epics/base/bin/${EPICS_HOST_ARCH}/caRepeater &
+    ${EPICS_BASE_BIN}/caRepeater &
 
-    cd  /usr/local/epics/epicsEdgeRoboArm/edgeRoboArmIOC/support/xxx-5-6/iocBoot/iocLinux
+    cd  ${ST_CMD_DIR}
     ./in-screen.sh
   fi
 fi
