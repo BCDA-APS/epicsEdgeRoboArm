@@ -50,9 +50,10 @@ startup file, signalling the IOC has started.
 If plugged in, the joystick should be able to operate.
 Test the LED to verify.
 
+.. _start.GUI.manually:
 
-Start the GUI
-*************
+Start the GUI (manually)
+************************
 
 On first logging in after startup, the GUI is supposed to 
 start automatically, about a minute after the IOC starts.
@@ -169,15 +170,18 @@ Among these:
    * libusb-1.0.0
    * libusb-1.0.0-dev
 
-The IOC must be run by the root user.  
-The Python GUI can be run by the *pi* user.
-Both of these are started by cron tasks that run every minute.
-Each cron task checks to see if the task is not already running and that appropriate 
-resources are available (IOC: the USB from the robot is plugged in 
-and the robot arm is powered on, GUI: the IOC is started). 
+The IOC *must* be run by the root user to communicate through the USB port.  
+The Python GUI can be run by the *pi* user 
+(it communicates with the EPICS IOC using EPICS Channel Access protocol).
+Both of these are started by cron tasks.
+Each cron task checks every minute to see if its assigned process is not already 
+running and that appropriate resources are available:
+
+  * IOC: the USB from the robot is plugged in and the robot arm is powered on
+  * GUI: the IOC is started 
 
 note: The GUI task is not starting from its cron task.  
-The startup script must be run manually.
+The startup script must be run manually (see :ref:`start.GUI.manually`).
 
 
 --------------
