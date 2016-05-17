@@ -4,49 +4,7 @@
 
 On 2016-05-21, Argonne National Laboratory [#]_ hosted an 
 open house.  [#]_ 
-The EPICS Edge Robot Arm was presented as a control system demonstration.   
-
-IOC Preparation
-***************
-
-A Raspberry Pi 3 (RasPi3) was setup with linux raspbian jessie 
-operating system on a 16 GB micro SD card (an 8GB card would be 
-fine just as well).  Once the 
-system was setup and operations verified, the SD card
-was imaged for use on several systems.  The units chosen for
-the demo were Raspberry Pi 2 (which can run the same software 
-and architecture build).
-
-For the open house demo system, a 7" touch screen 
-was configured so that the computer will run without 
-keyboard or mouse.
-
-EPICS base release 3.14.12.5 [#]_ 
-was installed (and built) in ``/usr/local/epics/base``.
-The EPICS Edge Robot Arm project software [#]_ 
-was installed using a ``git clone`` command in the
-`/usr/local/epics`` directory.  To facilitate 
-configuration already in the project,  a soft link
-was made as follows::
-
-    cd /usr/local/epics
-    ln -s epicsEdgeRoboArm/edgeRoboArmIOC  ./edgeRoboArmIOC
-    cd edgeRoboArmIOC/support
-    make release
-    make
-
-Various packages were installed so that the build wwas successful.
-Among these:  re2c libreadline, libreadline-dev libusb-1.0.0, libusb-1.0.0-dev
-
-The IOC must be run by the root user.  
-The Python GUI can be run by the *pi* user.
-Both of these are started by cron tasks that run every minute.
-Each cron task checks to see if the task is not already running and that appropriate 
-resources are available (IOC: the USB from the robot is plugged in 
-and the robot arm is powered on, GUI: the IOC is started). 
-
-note: The GUI task is not starting from its cron task.  
-The startup script must be run manually.
+The EPICS Edge Robot Arm was presented as a control system demonstration.  
 
 Connecting it all up
 ********************
@@ -160,13 +118,66 @@ The IOC is prepared for the joystick to be hot-swapped
 If you plug in a second recognized joystick, it will also work.
 If it is the same type as an existing plugged-in joystick, the 
 second will be ignored unless you create additional EPICS support.
-But, who will do that?
+But, who would ever do that?
 
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   joysticks/*
+   joysticks/* 
+
+IOC Preparation
+***************
+
+A Raspberry Pi 3 (RasPi3) was setup with linux raspbian jessie 
+operating system on a 16 GB micro SD card (an 8GB card would be 
+fine just as well).  Once the 
+system was setup and operations verified, the SD card
+was imaged for use on several systems.  The units chosen for
+the demo were Raspberry Pi 2 (which can run the same software 
+and architecture build).
+
+For the open house demo system, a 7" touch screen 
+was configured so that the computer will run without 
+keyboard or mouse.
+
+EPICS base release 3.14.12.5 [#]_ 
+was installed (and built) in ``/usr/local/epics/base``.
+The EPICS Edge Robot Arm project software [#]_ 
+was installed using a ``git clone`` command in the
+`/usr/local/epics`` directory.  To facilitate 
+configuration already in the project,  a soft link
+was made as follows::
+
+    cd /usr/local/epics
+    ln -s epicsEdgeRoboArm/edgeRoboArmIOC  ./edgeRoboArmIOC
+    cd edgeRoboArmIOC/support
+    make release
+    make
+
+Various packages were installed 
+(using ``sudo apt-get install <package>``) 
+so that the build was successful.
+Among these:  
+
+.. hlist::
+   :columns: 3
+   
+   * re2c
+   * libreadline
+   * libreadline-dev
+   * libusb-1.0.0
+   * libusb-1.0.0-dev
+
+The IOC must be run by the root user.  
+The Python GUI can be run by the *pi* user.
+Both of these are started by cron tasks that run every minute.
+Each cron task checks to see if the task is not already running and that appropriate 
+resources are available (IOC: the USB from the robot is plugged in 
+and the robot arm is powered on, GUI: the IOC is started). 
+
+note: The GUI task is not starting from its cron task.  
+The startup script must be run manually.
 
 
 --------------
